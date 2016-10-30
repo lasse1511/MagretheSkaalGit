@@ -25,6 +25,18 @@
         <activity
             android:name=".Info1"
             android:label="@string/title_activity_info1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SendNames"
+            android:label="@string/title_activity_send_names"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Info2"
+            android:label="@string/title_activity_info2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Info3"
+            android:label="@string/title_activity_info3"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

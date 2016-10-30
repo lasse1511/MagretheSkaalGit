@@ -3,4 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_setup_game">SetupGame</string>
     <string name="title_activity_info1">Info1</string>
+    <string name="title_activity_send_names">SendNames</string>
+    <string name="title_activity_info2">Info2</string>
+    <string name="title_activity_info3">Info3</string>
 </resources>
