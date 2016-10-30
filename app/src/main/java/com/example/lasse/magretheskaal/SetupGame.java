@@ -26,13 +26,13 @@ public class SetupGame extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        Button info2 = (Button) findViewById(R.id.);
+        Button info2 = (Button) findViewById(R.id.BTN_Info2);
 
         info2.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View view) {
-             startActivity(new Intent(SetupGame.this, Info3.class));
-             }
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SetupGame.this, Info2.class));
+            }
         });
 
 
@@ -43,6 +43,7 @@ public class SetupGame extends AppCompatActivity {
                 startActivity(new Intent(SetupGame.this, SendNames.class));
             }
 
-    }
+        });
 
+    }
 }
