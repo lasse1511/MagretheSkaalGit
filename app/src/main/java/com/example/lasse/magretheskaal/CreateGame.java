@@ -1,13 +1,16 @@
 package com.example.lasse.magretheskaal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewManager;
 
 public class CreateGame extends AppCompatActivity {
 
@@ -18,12 +21,19 @@ public class CreateGame extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        Button start = (Button) findViewById(R.id.BTN_start);
+        start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                startActivity(new Intent(CreateGame.this, SetupGame.class));
+            }
+        });
+
+        Button info1 = (Button) findViewById(R.id.BTN_Info1);
+        info1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                //Skriv metode for infoknap her
             }
         });
     }
