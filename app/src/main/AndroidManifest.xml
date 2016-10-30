@@ -21,6 +21,10 @@
         <activity
             android:name=".SetupGame"
             android:label="@string/title_activity_setup_game"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Info1"
+            android:label="@string/title_activity_info1"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

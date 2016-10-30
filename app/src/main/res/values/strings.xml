@@ -2,4 +2,5 @@
     <string name="app_name">MagretheSkaal</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_setup_game">SetupGame</string>
+    <string name="title_activity_info1">Info1</string>
 </resources>

@@ -33,7 +33,7 @@ public class CreateGame extends AppCompatActivity {
         info1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //Skriv metode for infoknap her
+                startActivity(new Intent(CreateGame.this, Info1.class));
             }
         });
     }

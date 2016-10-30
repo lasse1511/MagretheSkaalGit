@@ -13,18 +13,35 @@
     tools:context="com.example.lasse.magretheskaal.CreateGame"
     tools:showIn="@layout/activity_create_game">
 
+    <Button
+        android:text="Start game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BTN_start"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="88dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:enabled="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/textView" />
+        android:text="Magretheskål"
+        android:id="@+id/textView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp" />
 
     <Button
-        android:text="Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="146dp"
-        android:id="@+id/button" />
+        android:id="@+id/BTN_Info1"
+        android:background="@android:drawable/ic_menu_info_details"
+        android:minHeight="61dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/BTN_start"
+        android:layout_marginStart="16dp"
+        android:enabled="true" />
 </RelativeLayout>
