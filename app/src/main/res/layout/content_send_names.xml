@@ -14,13 +14,12 @@
     tools:showIn="@layout/activity_send_names">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:id="@+id/BTN_Info3"
         android:background="@android:drawable/ic_menu_info_details"
         android:minHeight="61dp"
-        android:layout_marginStart="290dp"
         android:enabled="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
