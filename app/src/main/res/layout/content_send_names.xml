@@ -11,7 +11,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.lasse.magretheskaal.SendNames"
-    tools:showIn="@layout/activity_send_names">
+    tools:showIn="@layout/activity_send_names"
+    android:focusable="true">
 
     <Button
         android:layout_width="30dp"

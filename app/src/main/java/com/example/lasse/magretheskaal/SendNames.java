@@ -10,10 +10,15 @@ import android.widget.TextView;
 
 public class SendNames extends AppCompatActivity {
 
+    BetweenScreen bt = new BetweenScreen();
+    final LogicLayer logic = new LogicLayer();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_names);
+
 
         Button info3 = (Button) findViewById(R.id.BTN_Info3);
         info3.setOnClickListener(new View.OnClickListener() {
@@ -28,15 +33,16 @@ public class SendNames extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(SendNames.this, BetweenScreen.class));
+                bt.setLogic(logic);
             }
         });
 
 
-        final LogicLayer logic = new LogicLayer();
 
 
         Button send = (Button) findViewById(R.id.BTN_Send);
         final EditText name = (EditText) findViewById(R.id.TB_SendName);
+        name.clearFocus();
         final TextView counter = (TextView) findViewById(R.id.TV_counter);
         send.setOnClickListener(new View.OnClickListener(){
             @Override
