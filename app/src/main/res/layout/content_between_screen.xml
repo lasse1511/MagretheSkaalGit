@@ -13,4 +13,38 @@
     tools:context="com.example.lasse.magretheskaal.BetweenScreen"
     tools:showIn="@layout/activity_between_screen">
 
+    <Button
+        android:text="Start next round "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp"
+        android:id="@+id/BTN_StartBetween" />
+
+    <TextView
+        android:text="Team 1 score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/Text_Team1Score" />
+
+    <TextView
+        android:text="Team 2 score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Text_Team2score"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Which round?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Text_Team1Score"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:id="@+id/Text_RoundBetween" />
+
 </RelativeLayout>
