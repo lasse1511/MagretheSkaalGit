@@ -3,193 +3,183 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\classes.jar"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.0.0_31a9bd75c5e1384de9ab7847fd5178551483ed03\classes.dex" />
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.0.0_f0b38207a46cbc38962791103b3feaf57caadd11\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.0_e14f746527e20e20d26804cf3b333c69d6a8b8ea\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="863b6a20029826ffa15c3cc56c8eee649efe8d02">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_3775bbe9cc5b6d5918c9c919d61e31b1cabca061\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3928df668506020375012752bd25bd72cd42f301">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_7ec59e90ef71cadd1c42fde641d8021799aa7877\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\design\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.0.0_f28a232f6add68a6d48d0fe7da98516daf5b288a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-<<<<<<< HEAD
-        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.0.0_1c3ae6168734b1687162e6f28393c2f5ef596ebe\classes.dex" />
-=======
-        sha1="20049feaf39dc27c0c3ef84e2b8be10d47de1e88">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1eafa6d08590d96cd107a53e01c71157ebecc8b1\classes.dex" />
->>>>>>> refs/remotes/origin/master
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\transition\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.0.0_324efa71dee3e6690cd5e5ac596275351e5f420e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_4f84c3dcde95ca795abad2dadc201141908f9183\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_fb08d350d602f8b304ce55ea42bab4ccb8022079\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.0_be3bd8196259935e9cb75087ed5ee77de633210f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_0b405c014379aedf7f8425d7b0c78fb3d8a371d5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.0.0_aba3a85ac664979ded38edf8d40dd8a7a77ea136\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.0.0_dbfbdd04d11cce604a966e85496398addfab7411\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_fa8d4b54d2586b6027831ef06f74e40c1f5411b3\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.0.0_dc66e5b7483110443de83cd023e0d48d66c91482\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\classes.jar"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.0.0_b49dd0167fd69258d28af7dd8b945abe7feb3a68\classes.dex" />
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.0.0_a25ce4f7b12c0dc6b148adaa293a91b45562b0dd\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-<<<<<<< HEAD
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_6ccaa7c20d5cbcadfa096ae8bab0bff5a571a33d\classes.dex" />
-=======
-        sha1="ada1cf3955931dd42ee5420e93bd21f3cdec08c1">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6b92dde5d905be9bb08f5429879d5e2de8b72316\classes.dex" />
->>>>>>> refs/remotes/origin/master
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_a3b8aeac8c40cefb8dd5962660eeae7816c99961\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.0\jars\classes.jar"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\libs\internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.0.0_7b09faa64fab2eb061511561489677ca329267e2\classes.dex" />
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_206e6a578ad848a820beeff15a3cc4d09499ead4\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Daniel\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.0\support-annotations-25.0.0.jar"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.0.0_eb4513621cd9954bdd32db8704904e060f6b6f06\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8a398b2d5c71a52e1e2f337c2d01293ce21d284d">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1eafa6d08590d96cd107a53e01c71157ebecc8b1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\transition\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.0.0_34f9d5abeeba81d0e6084b2398fa4f1a7182e7f9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.0_8b6d71a5ab7cd077bef4ef1bd47546454b98e4f0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.0_c0329ca333fa26867b834f6b1255b7ddd5ede597\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.0.0_6925d5c70d441a7024a311f1c5dc07b95e0dc9c4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\design\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.0.0_7b5c82b2b245bb295725ceeb3c09966e565734c2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.0\support-annotations-25.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.0_26b9b060eee993882bc1ab66773adc9a703bb069\classes.dex" />
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.0_f925a9401bb1e36af198229867bc4c08067ca450\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\classes.jar"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_850c168b6cfa5a2177f4491d6af612a9afb7cad9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.0.0_27884b4479b983a11ddb25291c7f3068481ab769\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.0.0_063aa6c4192612b8e2386da9e9cf60e438d41d87\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_dda03e3816d8afa8c78540efae47d683067c4955\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f9a2783a9f9b7a1be0a58fe4f36e0b9bbe1d6b58">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6b92dde5d905be9bb08f5429879d5e2de8b72316\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.0.0_8692a075a24491fe8461740e48260925f45d8620\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_584e5f8e868cd48b6a1ac7bdd233e53e5329d5bf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="26674000177e45447a0326a6ad84612761199a13">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.0_acda3cb688abd960d02bb36d43b91d361ea67b5e\classes.dex" />
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.0_7af8d0e7a01e35a0337686ae5fd18c9a1c8d737b\classes.dex" />
     </item>
 
 </items>

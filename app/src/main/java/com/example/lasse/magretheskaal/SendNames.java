@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class SendNames extends AppCompatActivity {
 
     BetweenScreen bt = new BetweenScreen();
-    final LogicLayer logic = new LogicLayer();
+    LogicLayer logic = new LogicLayer();
 
 
     @Override
@@ -62,4 +62,8 @@ public class SendNames extends AppCompatActivity {
 
     }
 
+    public void setLogic(LogicLayer logic_)
+    {
+        logic = logic_;
+    }
 }

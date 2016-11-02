@@ -9,7 +9,21 @@ import java.util.List;
 
 public class LogicLayer {
 
-    List<String> NamesOrg = new ArrayList<String>();
+    List<String> NamesOrg;
+    List<String> NamesEdit;
+    public int Team1Score;
+    public int Team2Score;
+
+    public LogicLayer()
+    {
+        NamesOrg = new ArrayList<String>();
+        NamesEdit = NamesOrg;
+        Team1Score = 0;
+        Team2Score = 0;
+    }
+
+
+
 
     public void addToNames(String name){
         NamesOrg.add(name);
@@ -19,6 +33,20 @@ public class LogicLayer {
         return NamesOrg.size();
     }
 
+    public void team1Scores()
+    {
+        Team1Score++;
+    }
+
+    public void team2Scores()
+    {
+        Team2Score++;
+    }
+
+    public void removeName(int i)
+    {
+        NamesEdit.remove(i);
+    }
     
 
 }

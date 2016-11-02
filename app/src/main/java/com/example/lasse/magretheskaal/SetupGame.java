@@ -10,6 +10,7 @@ import android.widget.NumberPicker;
 public class SetupGame extends AppCompatActivity {
 
     LogicLayer logic = new LogicLayer();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +48,7 @@ public class SetupGame extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(SetupGame.this, SendNames.class));
+
 
 
             }
