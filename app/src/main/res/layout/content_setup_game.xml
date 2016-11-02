@@ -11,14 +11,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".SetupGame" >
 
-    <EditText
-        android:id="@+id/txt_time"
-        android:layout_width="match_parent"
+    <NumberPicker
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:hint="Touch here to select a Round time"
-
-        />
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:id="@+id/numberPicker" />
 
     <CheckBox
         android:text="Special round:"
