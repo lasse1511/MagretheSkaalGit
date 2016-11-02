@@ -10,6 +10,9 @@ import java.util.List;
 public class LogicLayer {
 
     List<String> NamesOrg = new ArrayList<String>();
+    List<String> Rounds = new ArrayList<String>();
+    int RoundTime ;
+
 
     public void addToNames(String name){
         NamesOrg.add(name);
@@ -17,6 +20,21 @@ public class LogicLayer {
 
     public int displayNumberOfNames(){
         return NamesOrg.size();
+    }
+
+    public  void setRoundTime(int rt)
+    {
+        RoundTime = rt/5-5;
+
+    }
+    public int getRoundTime()
+    {
+        return RoundTime;
+    }
+
+    public void setRoundType(List<String> rounds)
+    {
+
     }
 
     

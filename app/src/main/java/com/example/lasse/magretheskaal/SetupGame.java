@@ -10,22 +10,20 @@ import android.widget.NumberPicker;
 public class SetupGame extends AppCompatActivity {
 
     LogicLayer logic = new LogicLayer();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup_game);
-
+        final NumberPicker np = (NumberPicker) findViewById(R.id.numberPicker);
         Button info2 = (Button) findViewById(R.id.BTN_Info2);
-
         info2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(SetupGame.this, Info2.class));
+
             }
         });
-
-
-        NumberPicker np = (NumberPicker) findViewById(R.id.numberPicker);
 
         String[] numbers = getNumbers();
         np.setDisplayedValues(numbers);
@@ -47,7 +45,7 @@ public class SetupGame extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(SetupGame.this, SendNames.class));
-
+                logic.setRoundTime(np.getValue());
 
             }
 
@@ -88,13 +86,9 @@ public class SetupGame extends AppCompatActivity {
             }
 
             return numbers;
-
         }
 
-    public Integer getTime(int i)
-    {
-        return  i/5-5;
-    }
+
 
     }
 
