@@ -25,6 +25,7 @@ public class LogicLayer {
 
     public void addToNames(String name){
         NamesOrg.add(name);
+        NamesEdit = NamesOrg;
     }
 
     public int displayNumberOfNames(){
