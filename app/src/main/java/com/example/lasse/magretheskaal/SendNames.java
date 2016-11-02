@@ -23,15 +23,6 @@ public class SendNames extends AppCompatActivity {
             }
         });
 
-        Button next = (Button) findViewById(R.id.BTN_NextSend);
-        next.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(SendNames.this, BetweenScreen.class));
-            }
-        });
-
-
         final LogicLayer logic = new LogicLayer();
 
 

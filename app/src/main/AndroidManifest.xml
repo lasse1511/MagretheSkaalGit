@@ -37,10 +37,6 @@
         <activity
             android:name=".Info3"
             android:label="@string/title_activity_info3"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".BetweenScreen"
-            android:label="@string/title_activity_between_screen"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

@@ -51,13 +51,4 @@
         android:layout_below="@+id/BTN_Info3"
         android:layout_toStartOf="@+id/TB_SendName"
         android:id="@+id/TV_counter" />
-
-    <Button
-        android:text="Next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="42dp"
-        android:id="@+id/BTN_NextSend"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
 </RelativeLayout>
