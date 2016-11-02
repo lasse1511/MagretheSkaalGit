@@ -19,4 +19,6 @@ public class LogicLayer {
         return NamesOrg.size();
     }
 
+    
+
 }
