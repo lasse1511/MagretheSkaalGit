@@ -17,7 +17,7 @@
         android:text="Right answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
+        android:id="@+id/BTN_right"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="106dp" />
@@ -26,16 +26,16 @@
         android:text="Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3"
+        android:id="@+id/text_namesPlay"
         android:layout_marginBottom="73dp"
-        android:layout_above="@+id/button"
+        android:layout_above="@+id/BTN_right"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:text="Pass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
+        android:id="@+id/BTN_pass"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="47dp" />

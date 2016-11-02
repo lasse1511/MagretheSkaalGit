@@ -9,9 +9,26 @@ import java.util.List;
 
 public class LogicLayer {
 
+<<<<<<< HEAD
     List<String> NamesOrg = new ArrayList<String>();
     List<String> Rounds = new ArrayList<String>();
     int RoundTime ;
+=======
+    List<String> NamesOrg;
+    List<String> NamesEdit;
+    public int Team1Score;
+    public int Team2Score;
+
+    public LogicLayer()
+    {
+        NamesOrg = new ArrayList<String>();
+        NamesEdit = NamesOrg;
+        Team1Score = 0;
+        Team2Score = 0;
+    }
+
+
+>>>>>>> refs/remotes/origin/master
 
 
     public void addToNames(String name){
@@ -22,6 +39,7 @@ public class LogicLayer {
         return NamesOrg.size();
     }
 
+<<<<<<< HEAD
     public  void setRoundTime(int rt)
     {
         RoundTime = rt/5-5;
@@ -37,6 +55,22 @@ public class LogicLayer {
 
     }
 
+=======
+    public void team1Scores()
+    {
+        Team1Score++;
+    }
+
+    public void team2Scores()
+    {
+        Team2Score++;
+    }
+
+    public void removeName(int i)
+    {
+        NamesEdit.remove(i);
+    }
+>>>>>>> refs/remotes/origin/master
     
 
 }

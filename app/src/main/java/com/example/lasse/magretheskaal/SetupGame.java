@@ -47,6 +47,7 @@ public class SetupGame extends AppCompatActivity {
                 startActivity(new Intent(SetupGame.this, SendNames.class));
                 logic.setRoundTime(np.getValue());
 
+
             }
 
         });
