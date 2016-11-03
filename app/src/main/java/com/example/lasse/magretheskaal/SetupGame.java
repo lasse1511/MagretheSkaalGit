@@ -5,17 +5,24 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.NumberPicker;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SetupGame extends AppCompatActivity {
 
     LogicLayer logic = new LogicLayer();
+    SendNames sendNames = new SendNames();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup_game);
         final NumberPicker np = (NumberPicker) findViewById(R.id.numberPicker);
+
         Button info2 = (Button) findViewById(R.id.BTN_Info2);
         info2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,6 +31,8 @@ public class SetupGame extends AppCompatActivity {
 
             }
         });
+
+
 
         String[] numbers = getNumbers();
         np.setDisplayedValues(numbers);
@@ -46,6 +55,8 @@ public class SetupGame extends AppCompatActivity {
             public void onClick(View view) {
                 startActivity(new Intent(SetupGame.this, SendNames.class));
                 logic.setRoundTime(np.getValue());
+                logic.setRoundType(getRounds());
+                sendNames.setLogic(logic);
 
 
             }
@@ -87,6 +98,27 @@ public class SetupGame extends AppCompatActivity {
             }
 
             return numbers;
+        }
+
+        public List<String> getRounds ()
+        {
+            List<String> rounds =new ArrayList<String>();
+            final CheckBox Special = (CheckBox) findViewById(R.id.checkBox7);
+            final CheckBox oWord = (CheckBox) findViewById(R.id.checkBox6);
+            final CheckBox Mine = (CheckBox) findViewById(R.id.checkBox5);
+            final CheckBox FreeS = (CheckBox) findViewById(R.id.checkBox2);
+            EditText SpecialT = (EditText) findViewById(R.id.editText);
+
+            if (Special.isChecked()==true)
+                rounds.add(SpecialT.getText().toString());
+            if(oWord.isChecked()==true)
+                rounds.add(oWord.getText().toString());
+            if (Mine.isChecked()==true)
+                rounds.add(Mine.getText().toString());
+            if (FreeS.isChecked()==true)
+                rounds.add(FreeS.getText().toString());
+
+            return  rounds;
         }
 
 
