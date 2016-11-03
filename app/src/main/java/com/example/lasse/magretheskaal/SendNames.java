@@ -10,9 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class SendNames extends AppCompatActivity {
 
-    BetweenScreen bt = new BetweenScreen();
     LogicLayer logic = new LogicLayer();
 
 
@@ -20,7 +21,6 @@ public class SendNames extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_names);
-
 
         Button info3 = (Button) findViewById(R.id.BTN_Info3);
         info3.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +34,7 @@ public class SendNames extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+<<<<<<< HEAD
                 AlertDialog.Builder builder = new AlertDialog.Builder(SendNames.this);
 
                 builder.setTitle("Confirm");
@@ -64,14 +65,24 @@ public class SendNames extends AppCompatActivity {
                 alert.show();
 
 
+=======
+                Intent i = new Intent(SendNames.this, BetweenScreen.class);
+                ArrayList<String> list = logic.NamesOrg;
+                i.putExtra("list", list);
+                startActivity(i);
+>>>>>>> origin/master
             }
         });
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+        Button send = (Button) findViewById(R.id.BTN_Send);
+>>>>>>> origin/master
         final EditText name = (EditText) findViewById(R.id.TB_SendName);
         name.clearFocus();
         final TextView counter = (TextView) findViewById(R.id.TV_counter);
