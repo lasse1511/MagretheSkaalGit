@@ -10,20 +10,23 @@ import android.widget.TextView;
 public class BetweenScreen extends AppCompatActivity {
 
     private LogicLayer logic = new LogicLayer();
-    private PlayScreen play = new PlayScreen();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_between_screen);
 
+
+
+        logic.NamesOrg = getIntent().getExtras().getStringArrayList("list");
+
+
+
         Button next = (Button) findViewById(R.id.BTN_StartBetween);
         next.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 startActivity(new Intent(BetweenScreen.this, PlayScreen.class));
-                play.setLogic(logic);
             }
         });
 
@@ -41,6 +44,7 @@ public class BetweenScreen extends AppCompatActivity {
 
 
     }
+
 
     public void setLogic(LogicLayer logic_)
     {

@@ -21,7 +21,6 @@ public class SetupGame extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(SetupGame.this, Info2.class));
-
             }
         });
 
@@ -44,10 +43,8 @@ public class SetupGame extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SetupGame.this, SendNames.class));
                 logic.setRoundTime(np.getValue());
-
-
+                Intent i = new Intent(SetupGame.this, SendNames.class);
             }
 
         });

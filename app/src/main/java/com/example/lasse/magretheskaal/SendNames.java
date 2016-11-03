@@ -8,9 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class SendNames extends AppCompatActivity {
 
-    BetweenScreen bt = new BetweenScreen();
     LogicLayer logic = new LogicLayer();
 
 
@@ -18,7 +19,6 @@ public class SendNames extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_names);
-
 
         Button info3 = (Button) findViewById(R.id.BTN_Info3);
         info3.setOnClickListener(new View.OnClickListener() {
@@ -32,12 +32,12 @@ public class SendNames extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SendNames.this, BetweenScreen.class));
-                bt.setLogic(logic);
+                Intent i = new Intent(SendNames.this, BetweenScreen.class);
+                ArrayList<String> list = logic.NamesOrg;
+                i.putExtra("list", list);
+                startActivity(i);
             }
         });
-
-
 
 
         Button send = (Button) findViewById(R.id.BTN_Send);
