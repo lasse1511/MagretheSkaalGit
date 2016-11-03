@@ -1,11 +1,11 @@
 package com.example.lasse.magretheskaal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -24,6 +24,14 @@ public class PlayScreen extends AppCompatActivity {
         TextView names = (TextView) findViewById(R.id.text_namesPlay);
         Button right = (Button) findViewById(R.id.BTN_right);
 
+        logic.NamesOrg = getIntent().getExtras().getStringArrayList("NamesOrg");
+        logic.NamesEdit = getIntent().getExtras().getStringArrayList("NamesEdit");
+        logic.RoundTime = getIntent().getExtras().getInt("RoundTime");
+        logic.RoundType = getIntent().getExtras().getStringArrayList("RoundType");
+        logic.Team1Score = getIntent().getExtras().getInt("Team1Score");
+        logic.Team2Score = getIntent().getExtras().getInt("Team2Score");
+
+
 
         right.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,8 +49,16 @@ public class PlayScreen extends AppCompatActivity {
             }
 
             public void onFinish() {
-                mTextField.setText("done!");
+                Intent i = new Intent(PlayScreen.this, BetweenScreen.class);
+                i.putExtra("NamesOrg", logic.NamesOrg);
+                i.putExtra("NamesEdit", logic.NamesEdit);
+                i.putStringArrayListExtra("RoundType", logic.RoundType);
+                i.putExtra("RoundTime", logic.RoundTime);
+                i.putExtra("Team1Score", logic.Team1Score);
+                i.putExtra("Team2Score", logic.Team2Score);
+
             }
+
 
         }.start();
 

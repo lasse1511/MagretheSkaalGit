@@ -18,17 +18,10 @@ public class BetweenScreen extends AppCompatActivity {
 
 
 
-        logic.NamesOrg = getIntent().getExtras().getStringArrayList("list");
-
-
-
-        Button next = (Button) findViewById(R.id.BTN_StartBetween);
-        next.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                startActivity(new Intent(BetweenScreen.this, PlayScreen.class));
-            }
-        });
+        logic.NamesOrg = getIntent().getExtras().getStringArrayList("NamesOrg");
+        logic.NamesEdit = getIntent().getExtras().getStringArrayList("NamesEdit");
+        logic.RoundTime = getIntent().getExtras().getInt("RoundTime");
+        logic.RoundType = getIntent().getExtras().getStringArrayList("RoundType");
 
         TextView Team1Score = (TextView) findViewById(R.id.Text_Team1Score);
         TextView Team2Score = (TextView) findViewById(R.id.Text_Team2score);
@@ -39,6 +32,22 @@ public class BetweenScreen extends AppCompatActivity {
 
         Team1Score.setText("Team 1 score: " + Integer.toString(T1S));
         Team2Score.setText("Team 2 score: " + Integer.toString(T2S));
+
+        Button next = (Button) findViewById(R.id.BTN_StartBetween);
+        next.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent i = new Intent(BetweenScreen.this, PlayScreen.class);
+                i.putStringArrayListExtra("NamesOrg", logic.NamesOrg);
+                i.putExtra("NamesEdit", logic.NamesEdit);
+                i.putStringArrayListExtra("RoundType", logic.RoundType);
+                i.putExtra("RoundTime", logic.RoundTime);
+                i.putExtra("Team1Score", logic.Team1Score);
+                i.putExtra("Team2Score", logic.Team2Score);
+            }
+        });
+
+
 
 
 

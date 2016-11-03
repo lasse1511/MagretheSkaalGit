@@ -10,8 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 public class SendNames extends AppCompatActivity {
 
     LogicLayer logic = new LogicLayer();
@@ -30,6 +28,9 @@ public class SendNames extends AppCompatActivity {
             }
         });
 
+        logic.RoundTime = getIntent().getExtras().getInt("RoundTime");
+        logic.RoundType = getIntent().getExtras().getStringArrayList("RoundType");
+
         Button next = (Button) findViewById(R.id.BTN_NextSend);
         next.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -44,9 +45,12 @@ public class SendNames extends AppCompatActivity {
 
                     public void onClick(DialogInterface dialog, int which) {
                         // Do nothing but close the dialog
+                        logic.NamesEdit = logic.NamesOrg;
                         Intent i = new Intent(SendNames.this, BetweenScreen.class);
-                        ArrayList<String> list = logic.NamesOrg;
-                        i.putExtra("list", list);
+                        i.putExtra("NamesEdit", logic.NamesEdit);
+                        i.putExtra("NamesOrg", logic.NamesOrg);
+                        i.putStringArrayListExtra("RoundType", logic.RoundType);
+                        i.putExtra("RoundTime", logic.RoundTime);
                         startActivity(i);
                         dialog.dismiss();
                     }

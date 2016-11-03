@@ -10,7 +10,6 @@ import android.widget.EditText;
 import android.widget.NumberPicker;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class SetupGame extends AppCompatActivity {
 
@@ -51,14 +50,16 @@ public class SetupGame extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                logic.setRoundTime(np.getValue());
+
                 Intent i = new Intent(SetupGame.this, SendNames.class);
-                
+                i.putStringArrayListExtra("RoundType", getRounds());
+                i.putExtra("RoundTime", logic.setRoundTime(np.getValue()));
                 startActivity(i);
             }
 
         });
     }
+
         public String[] getNumbers()
         {
             String[] numbers = new String[180/5];
@@ -96,9 +97,9 @@ public class SetupGame extends AppCompatActivity {
             return numbers;
         }
 
-        public List<String> getRounds ()
+        public ArrayList<String> getRounds ()
         {
-            List<String> rounds =new ArrayList<String>();
+            ArrayList<String> rounds =new ArrayList<String>();
             final CheckBox Special = (CheckBox) findViewById(R.id.checkBox7);
             final CheckBox oWord = (CheckBox) findViewById(R.id.checkBox6);
             final CheckBox Mine = (CheckBox) findViewById(R.id.checkBox5);
