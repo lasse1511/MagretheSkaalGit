@@ -34,7 +34,7 @@ public class SendNames extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-<<<<<<< HEAD
+
                 AlertDialog.Builder builder = new AlertDialog.Builder(SendNames.this);
 
                 builder.setTitle("Confirm");
@@ -44,9 +44,10 @@ public class SendNames extends AppCompatActivity {
 
                     public void onClick(DialogInterface dialog, int which) {
                         // Do nothing but close the dialog
-                        startActivity(new Intent(SendNames.this, BetweenScreen.class));
-                        bt.setLogic(logic);
-
+                        Intent i = new Intent(SendNames.this, BetweenScreen.class);
+                        ArrayList<String> list = logic.NamesOrg;
+                        i.putExtra("list", list);
+                        startActivity(i);
                         dialog.dismiss();
                     }
                 });
@@ -65,24 +66,13 @@ public class SendNames extends AppCompatActivity {
                 alert.show();
 
 
-=======
-                Intent i = new Intent(SendNames.this, BetweenScreen.class);
-                ArrayList<String> list = logic.NamesOrg;
-                i.putExtra("list", list);
-                startActivity(i);
->>>>>>> origin/master
+
             }
         });
 
 
-<<<<<<< HEAD
 
 
-
-
-=======
-        Button send = (Button) findViewById(R.id.BTN_Send);
->>>>>>> origin/master
         final EditText name = (EditText) findViewById(R.id.TB_SendName);
         name.clearFocus();
         final TextView counter = (TextView) findViewById(R.id.TV_counter);
@@ -107,8 +97,4 @@ public class SendNames extends AppCompatActivity {
 
     }
 
-    public void setLogic(LogicLayer logic_)
-    {
-        logic = logic_;
-    }
 }

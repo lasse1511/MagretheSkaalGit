@@ -15,7 +15,6 @@ import java.util.List;
 public class SetupGame extends AppCompatActivity {
 
     LogicLayer logic = new LogicLayer();
-    SendNames sendNames = new SendNames();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,14 +52,9 @@ public class SetupGame extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 logic.setRoundTime(np.getValue());
-<<<<<<< HEAD
-                logic.setRoundType(getRounds());
-                sendNames.setLogic(logic);
-
-
-=======
                 Intent i = new Intent(SetupGame.this, SendNames.class);
->>>>>>> origin/master
+                
+                startActivity(i);
             }
 
         });
