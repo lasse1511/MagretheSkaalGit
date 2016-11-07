@@ -12,7 +12,7 @@ import java.util.Random;
 
 public class PlayScreen extends AppCompatActivity {
 
-    private LogicLayer logic;
+    private LogicLayer logic = new LogicLayer();
     int index = 0;
     Random rand = new Random();
 
@@ -40,22 +40,30 @@ public class PlayScreen extends AppCompatActivity {
             }
         });
 
+        final Intent i = new Intent(PlayScreen.this, BetweenScreen.class);
+
         final TextView mTextField = (TextView) findViewById(R.id.Countdowntimer);
         new CountDownTimer(30000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 mTextField.setText("seconds remaining: " + Long.toString(millisUntilFinished / 1000));
                 //here you can have your logic to set text to edittext
+                if(millisUntilFinished==2)
+                {
+                    i.putExtra("NamesOrg", logic.NamesOrg);
+                    i.putExtra("NamesEdit", logic.NamesEdit);
+                    i.putStringArrayListExtra("RoundType", logic.RoundType);
+                    i.putExtra("RoundTime", logic.RoundTime);
+                    i.putExtra("Team1Score", logic.Team1Score);
+                    i.putExtra("Team2Score", logic.Team2Score);
+                }
             }
 
+
+
             public void onFinish() {
-                Intent i = new Intent(PlayScreen.this, BetweenScreen.class);
-                i.putExtra("NamesOrg", logic.NamesOrg);
-                i.putExtra("NamesEdit", logic.NamesEdit);
-                i.putStringArrayListExtra("RoundType", logic.RoundType);
-                i.putExtra("RoundTime", logic.RoundTime);
-                i.putExtra("Team1Score", logic.Team1Score);
-                i.putExtra("Team2Score", logic.Team2Score);
+
+                startActivity(i);
 
             }
 
