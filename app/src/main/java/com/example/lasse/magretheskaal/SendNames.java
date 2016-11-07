@@ -20,6 +20,10 @@ public class SendNames extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_names);
 
+        final EditText name = (EditText) findViewById(R.id.TB_SendName);
+        name.setSelected(false);
+
+
         Button info3 = (Button) findViewById(R.id.BTN_Info3);
         info3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,8 +81,6 @@ public class SendNames extends AppCompatActivity {
 
 
 
-        final EditText name = (EditText) findViewById(R.id.TB_SendName);
-        name.clearFocus();
         final TextView counter = (TextView) findViewById(R.id.TV_counter);
 
         Button send = (Button) findViewById(R.id.BTN_Send);
@@ -92,9 +94,9 @@ public class SendNames extends AppCompatActivity {
             }
         });
 
-        name.setOnClickListener(new View.OnClickListener(){
+        name.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
-            public void onClick(View view) {
+            public void onFocusChange(View view, boolean hasFocus) {
                 name.setText("");
             }
         });

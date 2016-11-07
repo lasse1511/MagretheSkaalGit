@@ -11,6 +11,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".SetupGame" >
 
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"/>
+
     <NumberPicker
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/checkBox7"
-        android:layout_above="@+id/editText"
+        android:layout_above="@+id/editText_SRound"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="24dp" />
 
@@ -52,13 +58,14 @@
         android:layout_above="@+id/checkBox5"
         android:layout_alignParentStart="true" />
 
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:text="Round name"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/editText_SRound"
         android:layout_marginBottom="80dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
