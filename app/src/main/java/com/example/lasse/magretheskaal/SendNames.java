@@ -50,7 +50,7 @@ public class SendNames extends AppCompatActivity {
                         i.putExtra("NamesEdit", logic.NamesEdit);
                         i.putExtra("NamesOrg", logic.NamesOrg);
                         i.putStringArrayListExtra("RoundType", logic.RoundType);
-                        i.putExtra("RoundTime", logic.RoundTime);
+                        i.putExtra("RoundTime", logic.getRoundTime());
                         startActivity(i);
                         dialog.dismiss();
                     }

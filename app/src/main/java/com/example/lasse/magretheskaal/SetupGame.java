@@ -34,16 +34,10 @@ public class SetupGame extends AppCompatActivity {
         String[] numbers = getNumbers();
         np.setDisplayedValues(numbers);
 
+
         np.setMaxValue(numbers.length - 1);
         np.setMinValue(0);
-        np.setWrapSelectorWheel(false);
 
-        np.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
-            @Override
-            public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-                int newValue = newVal * 5 + 5;
-            }
-        });
 
 
         Button next = (Button) findViewById(R.id.BTN_next);
@@ -53,7 +47,8 @@ public class SetupGame extends AppCompatActivity {
 
                 Intent i = new Intent(SetupGame.this, SendNames.class);
                 i.putStringArrayListExtra("RoundType", getRounds());
-                i.putExtra("RoundTime", logic.setRoundTime(np.getValue()));
+                logic.setRoundTime(np.getValue());
+                i.putExtra("RoundTime",logic.getRoundTime() );
                 startActivity(i);
             }
 

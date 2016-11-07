@@ -25,8 +25,8 @@ public class PlayScreen extends AppCompatActivity {
         Button right = (Button) findViewById(R.id.BTN_right);
 
         logic.NamesOrg = getIntent().getExtras().getStringArrayList("NamesOrg");
-        logic.NamesEdit = getIntent().getExtras().getStringArrayList("NamesEdit");
-        logic.RoundTime = getIntent().getExtras().getInt("RoundTime");
+         logic.NamesEdit = getIntent().getExtras().getStringArrayList("NamesEdit");
+        logic.RoundTime =getIntent().getExtras().getInt("RoundTime");
         logic.RoundType = getIntent().getExtras().getStringArrayList("RoundType");
         logic.Team1Score = getIntent().getExtras().getInt("Team1Score");
         logic.Team2Score = getIntent().getExtras().getInt("Team2Score");
@@ -43,26 +43,27 @@ public class PlayScreen extends AppCompatActivity {
         final Intent i = new Intent(PlayScreen.this, BetweenScreen.class);
 
         final TextView mTextField = (TextView) findViewById(R.id.Countdowntimer);
-        new CountDownTimer(30000, 1000) {
+        new CountDownTimer(logic.getRoundTime()*1000, 1000) {
 
             public void onTick(long millisUntilFinished) {
-                mTextField.setText("seconds remaining: " + Long.toString(millisUntilFinished / 1000));
+                mTextField.setText("seconds remaining: " + Long.toString((millisUntilFinished / 1000)));
                 //here you can have your logic to set text to edittext
-                if(millisUntilFinished==2)
+               /* if(millisUntilFinished==2)
                 {
-                    i.putExtra("NamesOrg", logic.NamesOrg);
-                    i.putExtra("NamesEdit", logic.NamesEdit);
-                    i.putStringArrayListExtra("RoundType", logic.RoundType);
-                    i.putExtra("RoundTime", logic.RoundTime);
-                    i.putExtra("Team1Score", logic.Team1Score);
-                    i.putExtra("Team2Score", logic.Team2Score);
-                }
+
+                }*/
             }
 
 
 
             public void onFinish() {
 
+                i.putExtra("NamesOrg", logic.NamesOrg);
+                i.putExtra("NamesEdit", logic.NamesEdit);
+                i.putStringArrayListExtra("RoundType", logic.RoundType);
+                i.putExtra("RoundTime", logic.RoundTime);
+                i.putExtra("Team1Score", logic.Team1Score);
+                i.putExtra("Team2Score", logic.Team2Score);
                 startActivity(i);
 
             }

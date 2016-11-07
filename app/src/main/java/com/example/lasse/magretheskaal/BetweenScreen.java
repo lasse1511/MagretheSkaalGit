@@ -41,7 +41,7 @@ public class BetweenScreen extends AppCompatActivity {
                 i.putStringArrayListExtra("NamesOrg", logic.NamesOrg);
                 i.putExtra("NamesEdit", logic.NamesEdit);
                 i.putStringArrayListExtra("RoundType", logic.RoundType);
-                i.putExtra("RoundTime", logic.RoundTime);
+                i.putExtra("RoundTime", logic.getRoundTime());
                 i.putExtra("Team1Score", logic.Team1Score);
                 i.putExtra("Team2Score", logic.Team2Score);
                 startActivity(i);

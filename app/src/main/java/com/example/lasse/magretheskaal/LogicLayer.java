@@ -9,7 +9,7 @@ import java.util.List;
 
 public class LogicLayer /* implements Parcelable */ {
 
-    int RoundTime;
+    public int RoundTime;
     ArrayList<String> RoundType;
     ArrayList<String> NamesOrg;
     ArrayList<String> NamesEdit;
@@ -34,7 +34,14 @@ public class LogicLayer /* implements Parcelable */ {
 
 
     public int setRoundTime(int rt) {
-        return rt / 5 - 5;
+        if( rt== 0) {
+            RoundTime=5;
+            return RoundTime;
+        }
+        else {
+            RoundTime = rt*5;
+            return RoundTime;
+        }
     }
 
     public int getRoundTime() {
