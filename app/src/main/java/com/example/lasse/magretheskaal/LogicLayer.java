@@ -15,12 +15,15 @@ public class LogicLayer /* implements Parcelable */ {
     ArrayList<String> NamesEdit;
     public int Team1Score;
     public int Team2Score;
+    public int RoundCounter;
+    public boolean TeamOnesRound;
 
     public LogicLayer() {
         NamesOrg = new ArrayList<String>();
         NamesEdit = NamesOrg;
         Team1Score = 0;
         Team2Score = 0;
+        TeamOnesRound = true;
     }
 
 
@@ -52,61 +55,19 @@ public class LogicLayer /* implements Parcelable */ {
 
     }
 
-    public void team1Scores() {
-        Team1Score++;
+    public void teamScores() {
+
+        if (TeamOnesRound == true)
+            Team1Score++;
+        else
+            Team2Score++;
     }
 
-    public void team2Scores() {
-        Team2Score++;
-    }
 
     public void removeName(int i) {
         NamesEdit.remove(i);
     }
 
-/*
-    public LogicLayer(Parcel parcel) {
-        this.RoundTime = parcel.readInt();
-        this.RoundType = parcel.readArrayList(null);
-        this.NamesOrg = parcel.readArrayList(null);
-        this.NamesEdit = parcel.readArrayList(null);
-        this.Team1Score = parcel.readInt();
-        this.Team2Score = parcel.readInt();
-    }
-
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(RoundTime);
-        dest.writeList(RoundType);
-        dest.writeList(NamesOrg);
-        dest.writeList(NamesEdit);
-        dest.writeInt(Team1Score);
-        dest.writeInt(Team2Score);
-    }
-
-    // Method to recreate a Question from a Parcel
-    public static Creator<LogicLayer> CREATOR = new Creator<LogicLayer>() {
-
-        @Override
-        public LogicLayer createFromParcel(Parcel source) {
-            return new LogicLayer(source);
-        }
-
-        @Override
-        public LogicLayer[] newArray(int size) {
-            return new LogicLayer[size];
-        }
-
-
-    };
-    */
 
 
 }

@@ -20,6 +20,8 @@ public class SetupGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup_game);
         final NumberPicker np = (NumberPicker) findViewById(R.id.numberPicker);
+        final EditText SRound = (EditText) findViewById(R.id.editText_SRound);
+
 
         Button info2 = (Button) findViewById(R.id.BTN_Info2);
         info2.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +55,17 @@ public class SetupGame extends AppCompatActivity {
             }
 
         });
+
+        SRound.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                SRound.setText("");
+            }
+        });
+
+
     }
+
 
         public String[] getNumbers()
         {
@@ -99,7 +111,7 @@ public class SetupGame extends AppCompatActivity {
             final CheckBox oWord = (CheckBox) findViewById(R.id.checkBox6);
             final CheckBox Mine = (CheckBox) findViewById(R.id.checkBox5);
             final CheckBox FreeS = (CheckBox) findViewById(R.id.checkBox2);
-            EditText SpecialT = (EditText) findViewById(R.id.editText);
+            EditText SpecialT = (EditText) findViewById(R.id.editText_SRound);
 
             if (Special.isChecked()==true)
                 rounds.add(SpecialT.getText().toString());
@@ -112,6 +124,9 @@ public class SetupGame extends AppCompatActivity {
 
             return  rounds;
         }
+
+
+
 
 
 
