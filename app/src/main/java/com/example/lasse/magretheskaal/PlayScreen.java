@@ -22,13 +22,23 @@ public class PlayScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_screen);
         final  AlertDialog.Builder builder = new AlertDialog.Builder(PlayScreen.this);
+        final  AlertDialog.Builder builder1 = new AlertDialog.Builder(PlayScreen.this);
+
 
         builder.setTitle("Round Finished");
         builder.setMessage("Next round");
+
+        builder1.setTitle("Round Finished");
+        builder1.setMessage("No more names in list");
+
         final AlertDialog alert = builder.create();
+        final AlertDialog alert1 = builder1.create();
+
         final TextView names = (TextView) findViewById(R.id.text_namesPlay);
         final Button right = (Button) findViewById(R.id.BTN_right);
         final Button pass = (Button) findViewById(R.id.BTN_pass);
+        final Intent i = new Intent(PlayScreen.this, BetweenScreen.class);
+
 
         logic.NamesOrg = getIntent().getExtras().getStringArrayList("NamesOrg");
         logic.NamesEdit = getIntent().getExtras().getStringArrayList("NamesEdit");
@@ -38,21 +48,38 @@ public class PlayScreen extends AppCompatActivity {
         logic.Team2Score = getIntent().getExtras().getInt("Team2Score");
 
 
+        //Visning af det første navn
         index =  rand.nextInt(logic.NamesEdit.size());
         names.setText(logic.NamesEdit.get(index));
+        logic.removeName(index);
 
 
 
-        right.setOnClickListener(new View.OnClickListener() {
+        right.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
-                if (logic.NamesEdit.size() > 0) {
-                    logic.removeName(index);
+            public void onClick(View view)
+            {
+                if (logic.NamesEdit.size() > 0)
+                {
                     index = rand.nextInt(logic.NamesEdit.size());
                     names.setText(logic.NamesEdit.get(index));
+                    logic.removeName(index);
+                }
+                else
+                {
+                    alert1.show();  
+                    right.setActivated(false);
+                    pass.setActivated(false);
+                    i.putExtra("NamesOrg", logic.NamesOrg);
+                    i.putExtra("NamesEdit", logic.NamesEdit);
+                    i.putStringArrayListExtra("RoundType", logic.RoundType);
+                    i.putExtra("RoundTime", logic.RoundTime);
+                    i.putExtra("Team1Score", logic.Team1Score);
+                    i.putExtra("Team2Score", logic.Team2Score);
+                    startActivity(i);
                 }
 
-                    //startActivity(i);
             }
         });
 
@@ -67,7 +94,6 @@ public class PlayScreen extends AppCompatActivity {
 
 
 
-        final Intent i = new Intent(PlayScreen.this, BetweenScreen.class);
         final TextView mTextField = (TextView) findViewById(R.id.Countdowntimer);
         Integer rt = (logic.getRoundTime()*1000)+1000;
         new CountDownTimer(rt, 1000) {
