@@ -1,5 +1,7 @@
 package com.example.lasse.magretheskaal;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -20,7 +22,11 @@ public class PlayScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_screen);
+        final  AlertDialog.Builder builder = new AlertDialog.Builder(PlayScreen.this);
 
+        builder.setTitle("Round Finished");
+        builder.setMessage("Next round");
+        final AlertDialog alert = builder.create();
         TextView names = (TextView) findViewById(R.id.text_namesPlay);
         Button right = (Button) findViewById(R.id.BTN_right);
 
@@ -43,29 +49,34 @@ public class PlayScreen extends AppCompatActivity {
         final Intent i = new Intent(PlayScreen.this, BetweenScreen.class);
 
         final TextView mTextField = (TextView) findViewById(R.id.Countdowntimer);
-        new CountDownTimer(logic.getRoundTime()*1000, 1000) {
+        Integer rt = (logic.getRoundTime()*1000)+1000;
+        new CountDownTimer(rt, 1000) {
 
             public void onTick(long millisUntilFinished) {
-                mTextField.setText("seconds remaining: " + Long.toString((millisUntilFinished / 1000)));
+                mTextField.setText("seconds remaining: " + Long.toString((millisUntilFinished / 1000)-1));
                 //here you can have your logic to set text to edittext
-               /* if(millisUntilFinished==2)
+               if((millisUntilFinished/1000)==1)
                 {
 
-                }*/
+                    alert.show();
+
+
+                    i.putExtra("NamesOrg", logic.NamesOrg);
+                    i.putExtra("NamesEdit", logic.NamesEdit);
+                    i.putStringArrayListExtra("RoundType", logic.RoundType);
+                    i.putExtra("RoundTime", logic.RoundTime);
+                    i.putExtra("Team1Score", logic.Team1Score);
+                    i.putExtra("Team2Score", logic.Team2Score);
+                }
             }
 
 
 
             public void onFinish() {
 
-                i.putExtra("NamesOrg", logic.NamesOrg);
-                i.putExtra("NamesEdit", logic.NamesEdit);
-                i.putStringArrayListExtra("RoundType", logic.RoundType);
-                i.putExtra("RoundTime", logic.RoundTime);
-                i.putExtra("Team1Score", logic.Team1Score);
-                i.putExtra("Team2Score", logic.Team2Score);
-                startActivity(i);
 
+                startActivity(i);
+                alert.dismiss();
             }
 
 

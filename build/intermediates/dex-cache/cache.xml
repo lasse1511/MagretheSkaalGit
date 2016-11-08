@@ -25,7 +25,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="006808118597f688982c509652f3b5b6b7cc6253">
+        sha1="e01b3d454873129f4fb25c6ed8982c7ffb0a54bc">
         <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_3775bbe9cc5b6d5918c9c919d61e31b1cabca061\classes.dex" />
     </item>
     <item
@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="5f6b73021fc3ac4e6acd5cc026d29e4c3085b872">
+        sha1="525c7ce5a3186c6ef77416fda2f2ea1b78bbb6bf">
         <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_7ec59e90ef71cadd1c42fde641d8021799aa7877\classes.dex" />
     </item>
     <item
