@@ -1,7 +1,6 @@
 package com.example.lasse.magretheskaal;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -23,30 +22,77 @@ public class PlayScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_screen);
         final  AlertDialog.Builder builder = new AlertDialog.Builder(PlayScreen.this);
+        final  AlertDialog.Builder builder1 = new AlertDialog.Builder(PlayScreen.this);
+
 
         builder.setTitle("Round Finished");
         builder.setMessage("Next round");
+
+        builder1.setTitle("Round Finished");
+        builder1.setMessage("No more names in list");
+
         final AlertDialog alert = builder.create();
-        TextView names = (TextView) findViewById(R.id.text_namesPlay);
-        Button right = (Button) findViewById(R.id.BTN_right);
+        final AlertDialog alert1 = builder1.create();
+
+        final TextView names = (TextView) findViewById(R.id.text_namesPlay);
+        final Button right = (Button) findViewById(R.id.BTN_right);
+        final Button pass = (Button) findViewById(R.id.BTN_pass);
+        final Intent i = new Intent(PlayScreen.this, BetweenScreen.class);
+
 
         logic.NamesOrg = getIntent().getExtras().getStringArrayList("NamesOrg");
-         logic.NamesEdit = getIntent().getExtras().getStringArrayList("NamesEdit");
+        logic.NamesEdit = getIntent().getExtras().getStringArrayList("NamesEdit");
         logic.RoundTime =getIntent().getExtras().getInt("RoundTime");
         logic.RoundType = getIntent().getExtras().getStringArrayList("RoundType");
         logic.Team1Score = getIntent().getExtras().getInt("Team1Score");
         logic.Team2Score = getIntent().getExtras().getInt("Team2Score");
 
 
+        //Visning af det første navn
+        index =  rand.nextInt(logic.NamesEdit.size());
+        names.setText(logic.NamesEdit.get(index));
+        logic.removeName(index);
 
-        right.setOnClickListener(new View.OnClickListener() {
+
+
+        right.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
+                if (logic.NamesEdit.size() > 0)
+                {
+                    index = rand.nextInt(logic.NamesEdit.size());
+                    names.setText(logic.NamesEdit.get(index));
+                    logic.removeName(index);
+                }
+                else
+                {
+                    alert1.show();  
+                    right.setActivated(false);
+                    pass.setActivated(false);
+                    i.putExtra("NamesOrg", logic.NamesOrg);
+                    i.putExtra("NamesEdit", logic.NamesEdit);
+                    i.putStringArrayListExtra("RoundType", logic.RoundType);
+                    i.putExtra("RoundTime", logic.RoundTime);
+                    i.putExtra("Team1Score", logic.Team1Score);
+                    i.putExtra("Team2Score", logic.Team2Score);
+                    startActivity(i);
+                }
 
             }
         });
 
-        final Intent i = new Intent(PlayScreen.this, BetweenScreen.class);
+
+        pass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                index = rand.nextInt(logic.NamesEdit.size());
+                names.setText(logic.NamesEdit.get(index));
+            }
+        });
+
+
 
         final TextView mTextField = (TextView) findViewById(R.id.Countdowntimer);
         Integer rt = (logic.getRoundTime()*1000)+1000;
@@ -57,10 +103,9 @@ public class PlayScreen extends AppCompatActivity {
                 //here you can have your logic to set text to edittext
                if((millisUntilFinished/1000)==1)
                 {
-
                     alert.show();
-
-
+                    right.setActivated(false);
+                    pass.setActivated(false);
                     i.putExtra("NamesOrg", logic.NamesOrg);
                     i.putExtra("NamesEdit", logic.NamesEdit);
                     i.putStringArrayListExtra("RoundType", logic.RoundType);
@@ -82,19 +127,6 @@ public class PlayScreen extends AppCompatActivity {
 
         }.start();
 
-        /*index = rand.nextInt(logic.NamesEdit.size());
-        names.setText(logic.NamesEdit.get(index));
-*/
-
         }
-
-
-
-
-
-    public void setLogic(LogicLayer logic_)
-    {
-        logic = logic_;
-    }
 
 }

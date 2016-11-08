@@ -16,8 +16,6 @@ public class BetweenScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_between_screen);
 
-
-
         logic.NamesOrg = getIntent().getExtras().getStringArrayList("NamesOrg");
         logic.NamesEdit = getIntent().getExtras().getStringArrayList("NamesEdit");
         logic.RoundTime = getIntent().getExtras().getInt("RoundTime");
@@ -33,6 +31,7 @@ public class BetweenScreen extends AppCompatActivity {
         Team1Score.setText("Team 1 score: " + Integer.toString(T1S));
         Team2Score.setText("Team 2 score: " + Integer.toString(T2S));
 
+
         Button next = (Button) findViewById(R.id.BTN_StartBetween);
         next.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -47,18 +46,5 @@ public class BetweenScreen extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-
-
-
-
-
     }
-
-
-    public void setLogic(LogicLayer logic_)
-    {
-        logic = logic_;
-    }
-
 }
