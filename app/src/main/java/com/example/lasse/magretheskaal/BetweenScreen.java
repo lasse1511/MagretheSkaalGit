@@ -20,6 +20,9 @@ public class BetweenScreen extends AppCompatActivity {
         logic.NamesEdit = getIntent().getExtras().getStringArrayList("NamesEdit");
         logic.RoundTime = getIntent().getExtras().getInt("RoundTime");
         logic.RoundType = getIntent().getExtras().getStringArrayList("RoundType");
+        logic.RoundCounter = getIntent().getExtras().getInt("RoundCounter");
+        logic.Team1Score = getIntent().getExtras().getInt("Team1Score");
+        logic.Team2Score = getIntent().getExtras().getInt("Team2Score");
 
         TextView Team1Score = (TextView) findViewById(R.id.Text_Team1Score);
         TextView Team2Score = (TextView) findViewById(R.id.Text_Team2score);
@@ -41,6 +44,9 @@ public class BetweenScreen extends AppCompatActivity {
                 i.putExtra("NamesEdit", logic.NamesEdit);
                 i.putStringArrayListExtra("RoundType", logic.RoundType);
                 i.putExtra("RoundTime", logic.getRoundTime());
+                i.putExtra("Team1Score", logic.Team1Score);
+                i.putExtra("Team2Score", logic.Team2Score);
+                i.putExtra("RoundCounter", logic.RoundCounter);
                 i.putExtra("Team1Score", logic.Team1Score);
                 i.putExtra("Team2Score", logic.Team2Score);
                 startActivity(i);

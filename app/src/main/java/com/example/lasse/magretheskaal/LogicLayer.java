@@ -24,6 +24,7 @@ public class LogicLayer /* implements Parcelable */ {
         Team1Score = 0;
         Team2Score = 0;
         TeamOnesRound = true;
+        RoundCounter = 0;
     }
 
 
@@ -57,7 +58,7 @@ public class LogicLayer /* implements Parcelable */ {
 
     public void teamScores() {
 
-        if (TeamOnesRound == true)
+        if (RoundCounter % 2 == 0)
             Team1Score++;
         else
             Team2Score++;

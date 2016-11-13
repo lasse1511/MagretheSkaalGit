@@ -46,6 +46,10 @@ public class PlayScreen extends AppCompatActivity {
         logic.RoundType = getIntent().getExtras().getStringArrayList("RoundType");
         logic.Team1Score = getIntent().getExtras().getInt("Team1Score");
         logic.Team2Score = getIntent().getExtras().getInt("Team2Score");
+        logic.RoundCounter = getIntent().getExtras().getInt("RoundCounter");
+        logic.Team1Score = getIntent().getExtras().getInt("Team1Score");
+        logic.Team2Score = getIntent().getExtras().getInt("Team2Score");
+
 
 
         //Visning af det første navn
@@ -60,6 +64,7 @@ public class PlayScreen extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
+                logic.teamScores();
                 if (logic.NamesEdit.size() > 0)
                 {
                     index = rand.nextInt(logic.NamesEdit.size());
@@ -68,13 +73,17 @@ public class PlayScreen extends AppCompatActivity {
                 }
                 else
                 {
-                    alert1.show();  
+                    alert1.show();
                     right.setActivated(false);
                     pass.setActivated(false);
+                    logic.RoundCounter++;
                     i.putExtra("NamesOrg", logic.NamesOrg);
                     i.putExtra("NamesEdit", logic.NamesEdit);
                     i.putStringArrayListExtra("RoundType", logic.RoundType);
                     i.putExtra("RoundTime", logic.RoundTime);
+                    i.putExtra("Team1Score", logic.Team1Score);
+                    i.putExtra("Team2Score", logic.Team2Score);
+                    i.putExtra("RoundCounter", logic.RoundCounter);
                     i.putExtra("Team1Score", logic.Team1Score);
                     i.putExtra("Team2Score", logic.Team2Score);
                     startActivity(i);
@@ -110,6 +119,9 @@ public class PlayScreen extends AppCompatActivity {
                     i.putExtra("NamesEdit", logic.NamesEdit);
                     i.putStringArrayListExtra("RoundType", logic.RoundType);
                     i.putExtra("RoundTime", logic.RoundTime);
+                    i.putExtra("Team1Score", logic.Team1Score);
+                    i.putExtra("Team2Score", logic.Team2Score);
+                    i.putExtra("RoundCounter", logic.RoundCounter);
                     i.putExtra("Team1Score", logic.Team1Score);
                     i.putExtra("Team2Score", logic.Team2Score);
                 }
