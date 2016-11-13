@@ -16,6 +16,7 @@ public class BetweenScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_between_screen);
 
+        //Hentning af data fra den tidligere screen
         logic.NamesOrg = getIntent().getExtras().getStringArrayList("NamesOrg");
         logic.NamesEdit = getIntent().getExtras().getStringArrayList("NamesEdit");
         logic.RoundTime = getIntent().getExtras().getInt("RoundTime");
@@ -24,26 +25,30 @@ public class BetweenScreen extends AppCompatActivity {
         logic.Team1Score = getIntent().getExtras().getInt("Team1Score");
         logic.Team2Score = getIntent().getExtras().getInt("Team2Score");
 
+        //opdatering af Tekst
         TextView Team1Score = (TextView) findViewById(R.id.Text_ENDTeam1Score);
         TextView Team2Score = (TextView) findViewById(R.id.Text_Team2score);
         TextView WhosRound = (TextView) findViewById(R.id.Text_WhosRound);
         TextView WhichRound = (TextView) findViewById(R.id.Text_RoundBetween);
 
+        //Score
         int T1S = logic.Team1Score;
         int T2S = logic.Team2Score;
 
-
+        //Score i Tekstvindue
         Team1Score.setText("Team 1 score: " + Integer.toString(T1S));
         Team2Score.setText("Team 2 score: " + Integer.toString(T2S));
 
+        //Betstemmelse af hvis tur det er næste gang
         if (logic.RoundCounter % 2 == 0)
             WhosRound.setText("Team 1 - get ready!");
         else if (logic.RoundCounter % 2 == 1)
             WhosRound.setText("Team 2 - get ready!");
 
+        //Rundetype
         WhichRound.setText(logic.RoundType.get(0).toString());
 
-
+         //start playScreen
         Button next = (Button) findViewById(R.id.BTN_StartBetween);
         next.setOnClickListener(new View.OnClickListener(){
             @Override

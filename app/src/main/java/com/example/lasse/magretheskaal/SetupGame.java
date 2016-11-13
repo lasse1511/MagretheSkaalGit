@@ -20,6 +20,8 @@ public class SetupGame extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup_game);
+
+        //set diverse objekter på interfacet
         final NumberPicker np = (NumberPicker) findViewById(R.id.numberPicker);
         final EditText SRound = (EditText) findViewById(R.id.editText_SRound);
         final CheckBox Special = (CheckBox) findViewById(R.id.checkBox7);
@@ -28,12 +30,12 @@ public class SetupGame extends AppCompatActivity {
         final CheckBox FreeS = (CheckBox) findViewById(R.id.checkBox2);
         final EditText SpecialT = (EditText) findViewById(R.id.editText_SRound);
 
-
+        //Sæt standartval af rundetyper
         oWord.setChecked(true);
         Mine.setChecked(true);
         FreeS.setChecked(true);
 
-
+        // vis infp
         Button info2 = (Button) findViewById(R.id.BTN_Info2);
         info2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,16 +45,14 @@ public class SetupGame extends AppCompatActivity {
         });
 
 
-
+        // Vis tider i numberpicker
         String[] numbers = getNumbers();
         np.setDisplayedValues(numbers);
-
-
         np.setMaxValue(numbers.length - 1);
         np.setMinValue(0);
 
 
-
+        // aflæs hvilke runder der er valgt, aflæs den valgte tid og vis Sendnames
         Button next = (Button) findViewById(R.id.BTN_next);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,10 +68,6 @@ public class SetupGame extends AppCompatActivity {
                     rounds.add(oWord.getText().toString());
                 if (Special.isChecked()==true)
                     rounds.add(SpecialT.getText().toString());
-
-
-
-
                 Intent i = new Intent(SetupGame.this, SendNames.class);
                 i.putStringArrayListExtra("RoundType", rounds);
                 logic.setRoundTime(np.getValue());
@@ -91,7 +87,7 @@ public class SetupGame extends AppCompatActivity {
 
     }
 
-
+        //sæt tilgængelige værdier i numberpickeren
         public String[] getNumbers()
         {
             String[] numbers = new String[180/5];
