@@ -76,6 +76,7 @@ public class PlayScreen extends AppCompatActivity {
                 else
                 {
                     alert1.show();
+
                     right.setActivated(false);
                     pass.setActivated(false);
                     logic.RoundCounter++;
@@ -89,6 +90,7 @@ public class PlayScreen extends AppCompatActivity {
                     i.putExtra("Team1Score", logic.Team1Score);
                     i.putExtra("Team2Score", logic.Team2Score);
                     startActivity(i);
+                    alert1.dismiss();
                 }
 
             }
