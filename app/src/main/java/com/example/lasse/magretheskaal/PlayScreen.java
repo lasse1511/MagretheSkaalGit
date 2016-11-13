@@ -24,7 +24,7 @@ public class PlayScreen extends AppCompatActivity {
         final  AlertDialog.Builder builder = new AlertDialog.Builder(PlayScreen.this);
         final  AlertDialog.Builder builder1 = new AlertDialog.Builder(PlayScreen.this);
 
-
+        //De to meddelelser som popper op i PS
         builder.setTitle("Round Finished");
         builder.setMessage("Next round");
 
@@ -34,12 +34,14 @@ public class PlayScreen extends AppCompatActivity {
         final AlertDialog alert = builder.create();
         final AlertDialog alert1 = builder1.create();
 
+
+        //Initiering af diverse knapper osv.
         final TextView names = (TextView) findViewById(R.id.text_namesPlay);
         final Button right = (Button) findViewById(R.id.BTN_right);
         final Button pass = (Button) findViewById(R.id.BTN_pass);
         final Intent i = new Intent(PlayScreen.this, BetweenScreen.class);
 
-
+        //Gemning af attributterne fra BW
         logic.NamesOrg = getIntent().getExtras().getStringArrayList("NamesOrg");
         logic.NamesEdit = getIntent().getExtras().getStringArrayList("NamesEdit");
         logic.RoundTime =getIntent().getExtras().getInt("RoundTime");
@@ -58,7 +60,7 @@ public class PlayScreen extends AppCompatActivity {
         logic.removeName(index);
 
 
-
+        //Hvis listen ikke er tom når knappen bliver trykket får det aktive hold et point, hvis den er tom sluttes runden
         right.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -92,7 +94,7 @@ public class PlayScreen extends AppCompatActivity {
             }
         });
 
-
+        //Et nyt navn vises hvis der trykkes pas:
         pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
