@@ -95,7 +95,6 @@ public class PlayScreen extends AppCompatActivity {
                 }
                 else if (logic.NamesEdit.size() == 0)
                 {
-<<<<<<< HEAD
                     if (logic.RoundType.size() == 1)
                     {
                         iEnd.putExtra("Team1Score", logic.Team1Score);
@@ -122,24 +121,6 @@ public class PlayScreen extends AppCompatActivity {
                         i.putExtra("Team2Score", logic.Team2Score);
                         startActivity(i);
                     }
-=======
-                    alert1.show();
-
-                    right.setActivated(false);
-                    pass.setActivated(false);
-                    logic.RoundCounter++;
-                    i.putExtra("NamesOrg", logic.NamesOrg);
-                    i.putExtra("NamesEdit", logic.NamesEdit);
-                    i.putStringArrayListExtra("RoundType", logic.RoundType);
-                    i.putExtra("RoundTime", logic.RoundTime);
-                    i.putExtra("Team1Score", logic.Team1Score);
-                    i.putExtra("Team2Score", logic.Team2Score);
-                    i.putExtra("RoundCounter", logic.RoundCounter);
-                    i.putExtra("Team1Score", logic.Team1Score);
-                    i.putExtra("Team2Score", logic.Team2Score);
-                    startActivity(i);
-                    alert1.dismiss();
->>>>>>> origin/master
                 }
             }
         });
