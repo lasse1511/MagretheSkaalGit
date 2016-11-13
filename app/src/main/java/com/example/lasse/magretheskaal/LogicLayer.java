@@ -39,11 +39,11 @@ public class LogicLayer /* implements Parcelable */ {
 
     public int setRoundTime(int rt) {
         if( rt== 0) {
-            RoundTime=5;
+            RoundTime=5+1;
             return RoundTime;
         }
         else {
-            RoundTime = 5+rt*5;
+            RoundTime = 1+5+rt*5;
             return RoundTime;
         }
     }

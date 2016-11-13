@@ -49,4 +49,13 @@
         android:layout_marginBottom="42dp"
         android:id="@+id/Countdowntimer" />
 
+    <Button
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/BTN_PlayPAUSE"
+        android:visibility="visible"
+        android:background="@android:drawable/ic_media_pause"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

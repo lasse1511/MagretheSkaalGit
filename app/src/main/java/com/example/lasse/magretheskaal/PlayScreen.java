@@ -41,6 +41,8 @@ public class PlayScreen extends AppCompatActivity {
         final TextView names = (TextView) findViewById(R.id.text_namesPlay);
         final Button right = (Button) findViewById(R.id.BTN_right);
         final Button pass = (Button) findViewById(R.id.BTN_pass);
+        final Button pause = (Button) findViewById(R.id.BTN_PlayPAUSE);
+        final TextView mTextField = (TextView) findViewById(R.id.Countdowntimer);
 
         //Initiering af Intents
         final Intent i = new Intent(this, BetweenScreen.class);
@@ -57,12 +59,23 @@ public class PlayScreen extends AppCompatActivity {
         logic.Team1Score = getIntent().getExtras().getInt("Team1Score");
         logic.Team2Score = getIntent().getExtras().getInt("Team2Score");
 
-        final TextView mTextField = (TextView) findViewById(R.id.Countdowntimer);
+
+        pause.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view)
+            {
+
+            }
+        });
+
+
+
+
         Integer rt = (logic.getRoundTime()*1000)+1000;
 
         final CountDownTimer CDT = new CountDownTimer(rt, 1000){
             public void onTick(long millisUntilFinished) {
-                mTextField.setText("seconds remaining: " + Long.toString((millisUntilFinished / 1000)-1));
+                mTextField.setText("Seconds remaining: " + Long.toString((millisUntilFinished / 1000)-1));
                 //here you can have your logic to set text to edittext
                 if((millisUntilFinished/1000)==1)
                 {
@@ -141,6 +154,7 @@ public class PlayScreen extends AppCompatActivity {
                     }
                     else
                     {
+
                         alert1.show();
                         right.setActivated(false);
                         pass.setActivated(false);
