@@ -52,8 +52,13 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
+<<<<<<< HEAD
         sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
         <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.0.0_1c3ae6168734b1687162e6f28393c2f5ef596ebe\classes.dex" />
+=======
+        sha1="4e7962d8ea398136ef65ddefc8789a670f4ab745">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1eafa6d08590d96cd107a53e01c71157ebecc8b1\classes.dex" />
+>>>>>>> origin/master
     </item>
     <item
         is-multidex="true"
@@ -151,8 +156,13 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
+<<<<<<< HEAD
         sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
         <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_6ccaa7c20d5cbcadfa096ae8bab0bff5a571a33d\classes.dex" />
+=======
+        sha1="a71c9313e14f20447f84657fca09bc4248c8a689">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6b92dde5d905be9bb08f5429879d5e2de8b72316\classes.dex" />
+>>>>>>> origin/master
     </item>
     <item
         is-multidex="true"
