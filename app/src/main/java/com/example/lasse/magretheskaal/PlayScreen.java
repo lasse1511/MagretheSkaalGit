@@ -57,6 +57,42 @@ public class PlayScreen extends AppCompatActivity {
         logic.Team1Score = getIntent().getExtras().getInt("Team1Score");
         logic.Team2Score = getIntent().getExtras().getInt("Team2Score");
 
+        final TextView mTextField = (TextView) findViewById(R.id.Countdowntimer);
+        Integer rt = (logic.getRoundTime()*1000)+1000;
+
+        final CountDownTimer CDT = new CountDownTimer(rt, 1000){
+            public void onTick(long millisUntilFinished) {
+                mTextField.setText("seconds remaining: " + Long.toString((millisUntilFinished / 1000)-1));
+                //here you can have your logic to set text to edittext
+                if((millisUntilFinished/1000)==1)
+                {
+                    alert.show();
+                    logic.RoundCounter++;
+                    right.setActivated(false);
+                    pass.setActivated(false);
+                    i.putExtra("NamesOrg", logic.NamesOrg);
+                    i.putExtra("NamesEdit", logic.NamesEdit);
+                    i.putStringArrayListExtra("RoundType", logic.RoundType);
+                    i.putExtra("RoundTime", logic.RoundTime);
+                    i.putExtra("Team1Score", logic.Team1Score);
+                    i.putExtra("Team2Score", logic.Team2Score);
+                    i.putExtra("RoundCounter", logic.RoundCounter);
+                    i.putExtra("Team1Score", logic.Team1Score);
+                    i.putExtra("Team2Score", logic.Team2Score);
+                }
+            }
+
+
+
+            public void onFinish() {
+
+
+                startActivity(i);
+                alert.dismiss();
+            }
+
+
+        }.start();
 
 
         //Visning af det første navn
@@ -100,6 +136,7 @@ public class PlayScreen extends AppCompatActivity {
                         iEnd.putExtra("Team1Score", logic.Team1Score);
                         iEnd.putExtra("Team2Score", logic.Team2Score);
                         iEnd.putExtra("NamesOrg", logic.NamesOrg);
+                        CDT.cancel();
                         startActivity(iEnd);
                     }
                     else
@@ -110,6 +147,7 @@ public class PlayScreen extends AppCompatActivity {
                         logic.RoundType.remove(0);
                         logic.NamesEdit = logic.NamesOrg;
                         logic.RoundCounter++;
+                        CDT.cancel();
                         i.putExtra("NamesOrg", logic.NamesOrg);
                         i.putExtra("NamesEdit", logic.NamesEdit);
                         i.putStringArrayListExtra("RoundType", logic.RoundType);
@@ -139,42 +177,7 @@ public class PlayScreen extends AppCompatActivity {
 
 
 
-        final TextView mTextField = (TextView) findViewById(R.id.Countdowntimer);
-        Integer rt = (logic.getRoundTime()*1000)+1000;
 
-        final CountDownTimer CDT = new CountDownTimer(rt, 1000){
-            public void onTick(long millisUntilFinished) {
-                mTextField.setText("seconds remaining: " + Long.toString((millisUntilFinished / 1000)-1));
-                //here you can have your logic to set text to edittext
-               if((millisUntilFinished/1000)==1)
-                {
-                    alert.show();
-                    logic.RoundCounter++;
-                    right.setActivated(false);
-                    pass.setActivated(false);
-                    i.putExtra("NamesOrg", logic.NamesOrg);
-                    i.putExtra("NamesEdit", logic.NamesEdit);
-                    i.putStringArrayListExtra("RoundType", logic.RoundType);
-                    i.putExtra("RoundTime", logic.RoundTime);
-                    i.putExtra("Team1Score", logic.Team1Score);
-                    i.putExtra("Team2Score", logic.Team2Score);
-                    i.putExtra("RoundCounter", logic.RoundCounter);
-                    i.putExtra("Team1Score", logic.Team1Score);
-                    i.putExtra("Team2Score", logic.Team2Score);
-                }
-            }
-
-
-
-            public void onFinish() {
-
-
-                startActivity(i);
-                alert.dismiss();
-            }
-
-
-        }.start();
 
         }
 
