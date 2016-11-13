@@ -43,7 +43,7 @@ public class LogicLayer /* implements Parcelable */ {
             return RoundTime;
         }
         else {
-            RoundTime = rt*5;
+            RoundTime = 5+rt*5;
             return RoundTime;
         }
     }
