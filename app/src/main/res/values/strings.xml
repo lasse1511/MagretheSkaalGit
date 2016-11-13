@@ -8,4 +8,5 @@
     <string name="title_activity_info3">Info3</string>
     <string name="title_activity_between_screen">BetweenScreen</string>
     <string name="title_activity_play_screen">PlayScreen</string>
+    <string name="title_activity_end_screen">EndScreen</string>
 </resources>

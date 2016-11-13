@@ -45,6 +45,10 @@
         <activity
             android:name=".PlayScreen"
             android:label="@string/title_activity_play_screen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EndScreen"
+            android:label="@string/title_activity_end_screen"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

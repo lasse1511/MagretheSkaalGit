@@ -42,9 +42,18 @@
         android:text="Which round?"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Text_Team1Score"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
-        android:id="@+id/Text_RoundBetween" />
+        android:id="@+id/Text_RoundBetween"
+        android:layout_below="@+id/Text_Team1Score"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Who's round?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Text_RoundBetween"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp"
+        android:id="@+id/Text_WhosRound" />
 
 </RelativeLayout>
