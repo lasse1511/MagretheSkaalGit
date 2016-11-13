@@ -1,6 +1,7 @@
 package com.example.lasse.magretheskaal;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -25,18 +26,6 @@ public class PlayScreen extends AppCompatActivity {
         final  AlertDialog.Builder builder1 = new AlertDialog.Builder(PlayScreen.this);
 
         //
-
-        //De to meddelelser som popper op i PS
-        builder.setTitle("Round Finished");
-        builder.setMessage("Next round");
-
-        builder1.setTitle("Round Finished");
-        builder1.setMessage("No more names in list");
-
-        final AlertDialog alert = builder.create();
-        final AlertDialog alert1 = builder1.create();
-
-
         //Initiering af diverse knapper osv.
         final TextView names = (TextView) findViewById(R.id.text_namesPlay);
         final Button right = (Button) findViewById(R.id.BTN_right);
@@ -45,6 +34,26 @@ public class PlayScreen extends AppCompatActivity {
         //Initiering af Intents
         final Intent i = new Intent(this, BetweenScreen.class);
         final Intent iEnd = new Intent(this,EndScreen.class);
+
+        //De to meddelelser som popper op i PS
+        builder.setTitle("Round Finished");
+        builder.setMessage("Next round");
+        final AlertDialog alert = builder.create();
+
+        builder1.setTitle("Round Finished");
+        builder1.setMessage("No more names in list");
+        builder1.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+
+                startActivity(i);
+            }
+        });
+        final AlertDialog alert1 = builder1.create();
+
+
+
+
+
 
         //Gemning af attributterne fra BW
         logic.NamesOrg = getIntent().getExtras().getStringArrayList("NamesOrg");
@@ -142,12 +151,12 @@ public class PlayScreen extends AppCompatActivity {
                     else
                     {
                         alert1.show();
+                        CDT.cancel();
                         right.setActivated(false);
                         pass.setActivated(false);
                         logic.RoundType.remove(0);
                         logic.NamesEdit = logic.NamesOrg;
                         logic.RoundCounter++;
-                        CDT.cancel();
                         i.putExtra("NamesOrg", logic.NamesOrg);
                         i.putExtra("NamesEdit", logic.NamesEdit);
                         i.putStringArrayListExtra("RoundType", logic.RoundType);
@@ -157,7 +166,6 @@ public class PlayScreen extends AppCompatActivity {
                         i.putExtra("RoundCounter", logic.RoundCounter);
                         i.putExtra("Team1Score", logic.Team1Score);
                         i.putExtra("Team2Score", logic.Team2Score);
-                        startActivity(i);
                     }
                 }
             }
