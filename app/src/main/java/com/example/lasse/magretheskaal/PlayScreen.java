@@ -55,9 +55,18 @@ public class PlayScreen extends AppCompatActivity {
 
 
         //Visning af det første navn
-        index =  rand.nextInt(logic.NamesEdit.size());
-        names.setText(logic.NamesEdit.get(index));
-        logic.removeName(index);
+        if (logic.NamesEdit.size() > 1)
+        {
+            index = rand.nextInt(logic.NamesEdit.size()-1);
+            names.setText(logic.NamesEdit.get(index));
+            logic.removeName(index);
+        }
+        else if (logic.NamesEdit.size() == 1)
+        {
+            index = 0;
+            names.setText(logic.NamesEdit.get(index));
+            logic.removeName(index);
+        }
 
 
         //Hvis listen ikke er tom når knappen bliver trykket får det aktive hold et point, hvis den er tom sluttes runden
@@ -67,13 +76,19 @@ public class PlayScreen extends AppCompatActivity {
             public void onClick(View view)
             {
                 logic.teamScores();
-                if (logic.NamesEdit.size() > 0)
+                if (logic.NamesEdit.size() > 1)
                 {
-                    index = rand.nextInt(logic.NamesEdit.size());
+                    index = rand.nextInt(logic.NamesEdit.size()-1);
                     names.setText(logic.NamesEdit.get(index));
                     logic.removeName(index);
                 }
-                else
+                else if (logic.NamesEdit.size() == 1)
+                {
+                    index = 0;
+                    names.setText(logic.NamesEdit.get(index));
+                    logic.removeName(index);
+                }
+                else if (logic.NamesEdit.size() == 0)
                 {
                     alert1.show();
                     right.setActivated(false);
@@ -90,7 +105,6 @@ public class PlayScreen extends AppCompatActivity {
                     i.putExtra("Team2Score", logic.Team2Score);
                     startActivity(i);
                 }
-
             }
         });
 
@@ -98,8 +112,11 @@ public class PlayScreen extends AppCompatActivity {
         pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                index = rand.nextInt(logic.NamesEdit.size());
-                names.setText(logic.NamesEdit.get(index));
+                if (logic.NamesEdit.size() > 1) {
+                    index = rand.nextInt(logic.NamesEdit.size() - 1);
+                    names.setText(logic.NamesEdit.get(index));
+                }
+
             }
         });
 
