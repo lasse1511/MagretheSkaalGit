@@ -24,7 +24,7 @@ public class BetweenScreen extends AppCompatActivity {
         logic.Team1Score = getIntent().getExtras().getInt("Team1Score");
         logic.Team2Score = getIntent().getExtras().getInt("Team2Score");
 
-        TextView Team1Score = (TextView) findViewById(R.id.Text_Team1Score);
+        TextView Team1Score = (TextView) findViewById(R.id.Text_ENDTeam1Score);
         TextView Team2Score = (TextView) findViewById(R.id.Text_Team2score);
         TextView WhosRound = (TextView) findViewById(R.id.Text_WhosRound);
         TextView WhichRound = (TextView) findViewById(R.id.Text_RoundBetween);

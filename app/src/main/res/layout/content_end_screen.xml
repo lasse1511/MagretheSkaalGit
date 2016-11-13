@@ -13,4 +13,28 @@
     tools:context="com.example.lasse.magretheskaal.EndScreen"
     tools:showIn="@layout/activity_end_screen">
 
+    <TextView
+        android:text="Who won?!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="142dp"
+        android:id="@+id/Text_winner" />
+
+    <TextView
+        android:text="Team1Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/Text_ENDTeam1Score" />
+
+    <TextView
+        android:text="Team2Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/Text_ENDTeam2Score" />
 </RelativeLayout>

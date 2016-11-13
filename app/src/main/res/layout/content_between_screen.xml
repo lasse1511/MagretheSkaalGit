@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/Text_Team1Score" />
+        android:id="@+id/Text_ENDTeam1Score" />
 
     <TextView
         android:text="Team 2 score"
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
         android:id="@+id/Text_RoundBetween"
-        android:layout_below="@+id/Text_Team1Score"
+        android:layout_below="@+id/Text_ENDTeam1Score"
         android:layout_centerHorizontal="true" />
 
     <TextView

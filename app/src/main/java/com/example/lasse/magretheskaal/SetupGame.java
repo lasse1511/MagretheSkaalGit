@@ -13,7 +13,8 @@ import java.util.ArrayList;
 
 public class SetupGame extends AppCompatActivity {
 
-    LogicLayer logic = new LogicLayer();
+    private LogicLayer logic = new LogicLayer();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,16 @@ public class SetupGame extends AppCompatActivity {
         setContentView(R.layout.activity_setup_game);
         final NumberPicker np = (NumberPicker) findViewById(R.id.numberPicker);
         final EditText SRound = (EditText) findViewById(R.id.editText_SRound);
+        final CheckBox Special = (CheckBox) findViewById(R.id.checkBox7);
+        final CheckBox oWord = (CheckBox) findViewById(R.id.checkBox6);
+        final CheckBox Mine = (CheckBox) findViewById(R.id.checkBox5);
+        final CheckBox FreeS = (CheckBox) findViewById(R.id.checkBox2);
+        final EditText SpecialT = (EditText) findViewById(R.id.editText_SRound);
+
+
+        oWord.setChecked(true);
+        Mine.setChecked(true);
+        FreeS.setChecked(true);
 
 
         Button info2 = (Button) findViewById(R.id.BTN_Info2);
@@ -47,8 +58,22 @@ public class SetupGame extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                ArrayList<String> rounds =new ArrayList<String>();
+
+                if (FreeS.isChecked()==true)
+                    rounds.add(FreeS.getText().toString());
+                if (Mine.isChecked()==true)
+                    rounds.add(Mine.getText().toString());
+                if(oWord.isChecked()==true)
+                    rounds.add(oWord.getText().toString());
+                if (Special.isChecked()==true)
+                    rounds.add(SpecialT.getText().toString());
+
+
+
+
                 Intent i = new Intent(SetupGame.this, SendNames.class);
-                i.putStringArrayListExtra("RoundType", getRounds());
+                i.putStringArrayListExtra("RoundType", rounds);
                 logic.setRoundTime(np.getValue());
                 i.putExtra("RoundTime",logic.getRoundTime() );
                 startActivity(i);
@@ -104,26 +129,6 @@ public class SetupGame extends AppCompatActivity {
             return numbers;
         }
 
-        public ArrayList<String> getRounds ()
-        {
-            ArrayList<String> rounds =new ArrayList<String>();
-            final CheckBox Special = (CheckBox) findViewById(R.id.checkBox7);
-            final CheckBox oWord = (CheckBox) findViewById(R.id.checkBox6);
-            final CheckBox Mine = (CheckBox) findViewById(R.id.checkBox5);
-            final CheckBox FreeS = (CheckBox) findViewById(R.id.checkBox2);
-            EditText SpecialT = (EditText) findViewById(R.id.editText_SRound);
-
-            if (Special.isChecked()==true)
-                rounds.add(SpecialT.getText().toString());
-            if(oWord.isChecked()==true)
-                rounds.add(oWord.getText().toString());
-            if (Mine.isChecked()==true)
-                rounds.add(Mine.getText().toString());
-            if (FreeS.isChecked()==true)
-                rounds.add(FreeS.getText().toString());
-
-            return  rounds;
-        }
 
 
 
