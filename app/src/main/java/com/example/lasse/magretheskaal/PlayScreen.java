@@ -68,7 +68,7 @@ public class PlayScreen extends AppCompatActivity {
         logic.Team1Score = getIntent().getExtras().getInt("Team1Score");
         logic.Team2Score = getIntent().getExtras().getInt("Team2Score");
 
-
+        //Dette sker når vi trykker på pause
         pause.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view)
@@ -79,9 +79,10 @@ public class PlayScreen extends AppCompatActivity {
 
 
 
-
+        //Rundetiden hentes fra logiklaget
         Integer rt = (logic.getRoundTime()*1000)+1000;
 
+        //En nedtælling starter og ved 1 sekund tilbage begynder processen om at samle intent
         final CountDownTimer CDT = new CountDownTimer(rt, 1000){
             public void onTick(long millisUntilFinished) {
                 mTextField.setText("Seconds remaining: " + Long.toString((millisUntilFinished / 1000)-1));
@@ -105,7 +106,7 @@ public class PlayScreen extends AppCompatActivity {
             }
 
 
-
+        //Når tidtælleren er færdig startes aktivitet som blev redigeret ovenover
             public void onFinish() {
 
 
@@ -132,7 +133,7 @@ public class PlayScreen extends AppCompatActivity {
         }
 
 
-        //Hvis listen ikke er tom når knappen bliver trykket får det aktive hold et point, hvis den er tom sluttes runden
+        //Hvis listen ikke er tom når knappen bliver trykket får det aktive hold et point, hvis den er tom sluttes runden og BW vises
         right.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -163,7 +164,6 @@ public class PlayScreen extends AppCompatActivity {
                     }
                     else
                     {
-
                         alert1.show();
                         CDT.cancel();
                         right.setActivated(false);
