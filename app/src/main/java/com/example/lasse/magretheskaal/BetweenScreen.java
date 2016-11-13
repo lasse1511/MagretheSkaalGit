@@ -1,5 +1,7 @@
 package com.example.lasse.magretheskaal;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -66,5 +68,39 @@ public class BetweenScreen extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+
+
     }
+
+    //Håndtering af tilbageknappen
+    @Override
+    public void onBackPressed()
+    {
+        final AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
+        final Intent i = new Intent(this, CreateGame.class);
+        builder1.setTitle("End game");
+        builder1.setMessage("Are you sure you want to end the game?");
+        builder1.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+
+                startActivity(i);
+            }
+        });
+
+        builder1.setNegativeButton("No", new DialogInterface.OnClickListener() {
+        @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                // Do nothing
+                dialog.dismiss();
+            }
+    });
+
+        AlertDialog alert = builder1.create();
+        alert.show();
+    }
+
 }
+
+
