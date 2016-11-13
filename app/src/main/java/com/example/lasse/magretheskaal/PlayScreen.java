@@ -25,11 +25,6 @@ public class PlayScreen extends AppCompatActivity {
         final  AlertDialog.Builder builder = new AlertDialog.Builder(PlayScreen.this);
         final  AlertDialog.Builder builder1 = new AlertDialog.Builder(PlayScreen.this);
 
-        //
-        //Initiering af diverse knapper osv.
-        final TextView names = (TextView) findViewById(R.id.text_namesPlay);
-        final Button right = (Button) findViewById(R.id.BTN_right);
-        final Button pass = (Button) findViewById(R.id.BTN_pass);
 
         //Initiering af Intents
         final Intent i = new Intent(this, BetweenScreen.class);
@@ -51,15 +46,13 @@ public class PlayScreen extends AppCompatActivity {
         final AlertDialog alert1 = builder1.create();
 
 
-<<<<<<< HEAD
+
         //Initiering af diverse knapper osv.
         final TextView names = (TextView) findViewById(R.id.text_namesPlay);
         final Button right = (Button) findViewById(R.id.BTN_right);
         final Button pass = (Button) findViewById(R.id.BTN_pass);
         final Button pause = (Button) findViewById(R.id.BTN_PlayPAUSE);
         final TextView mTextField = (TextView) findViewById(R.id.Countdowntimer);
-=======
->>>>>>> origin/master
 
 
 
