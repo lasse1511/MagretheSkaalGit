@@ -1,11 +1,14 @@
 package com.example.lasse.magretheskaal;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.NumberPicker;
 
@@ -29,6 +32,9 @@ public class SetupGame extends AppCompatActivity {
         final CheckBox Mine = (CheckBox) findViewById(R.id.checkBox5);
         final CheckBox FreeS = (CheckBox) findViewById(R.id.checkBox2);
         final EditText SpecialT = (EditText) findViewById(R.id.editText_SRound);
+        final InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+
+
 
         //Sæt standartval af rundetyper
         oWord.setChecked(true);
@@ -41,6 +47,13 @@ public class SetupGame extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(SetupGame.this, Info2.class));
+            }
+        });
+
+        Special.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                SpecialT.requestFocus();
             }
         });
 
@@ -77,12 +90,36 @@ public class SetupGame extends AppCompatActivity {
 
         });
 
+        //Fokus på edittext når special round checkes af
         SRound.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean hasFocus) {
                 SRound.setText("");
+                imm.showSoftInput(SpecialT, InputMethodManager.SHOW_IMPLICIT);
             }
         });
+
+       /* SpecialT.setOnKeyListener(new View.OnKeyListener()
+        {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event)
+            {
+                if (event.getAction() == KeyEvent.ACTION_DOWN)
+                {
+                    switch (keyCode)
+                    {
+                        case KeyEvent.KEYCODE_DPAD_CENTER:
+                        case KeyEvent.KEYCODE_ENTER:
+                            imm.showSoftInput(SpecialT, InputMethodManager.HIDE_IMPLICIT_ONLY);
+                            return true;
+                        default:
+                            break;
+                    }
+                }
+                return false;
+            }
+        });
+    */
 
 
     }

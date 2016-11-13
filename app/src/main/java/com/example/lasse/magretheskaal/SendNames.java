@@ -103,4 +103,32 @@ public class SendNames extends AppCompatActivity {
 
     }
 
+    //Håndtering af tilbageknappen
+    @Override
+    public void onBackPressed()
+    {
+        final AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
+        final Intent i = new Intent(this, SetupGame.class);
+        builder1.setTitle("Previous screen");
+        builder1.setMessage("Are you sure you want to go back? The list of names will be lost.");
+        builder1.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+
+                startActivity(i);
+            }
+        });
+
+        builder1.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                // Do nothing
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog alert = builder1.create();
+        alert.show();
+    }
+
 }

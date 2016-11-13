@@ -197,10 +197,13 @@ public class PlayScreen extends AppCompatActivity {
             }
         });
 
-
-
-
-
         }
+
+    //Disabling af tilbageknappen i PS
+    @Override
+    public void onBackPressed()
+    {
+
+    }
 
 }
