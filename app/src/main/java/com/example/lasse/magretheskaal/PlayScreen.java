@@ -24,6 +24,8 @@ public class PlayScreen extends AppCompatActivity {
         final  AlertDialog.Builder builder = new AlertDialog.Builder(PlayScreen.this);
         final  AlertDialog.Builder builder1 = new AlertDialog.Builder(PlayScreen.this);
 
+        //
+
         //De to meddelelser som popper op i PS
         builder.setTitle("Round Finished");
         builder.setMessage("Next round");
@@ -126,8 +128,8 @@ public class PlayScreen extends AppCompatActivity {
 
         final TextView mTextField = (TextView) findViewById(R.id.Countdowntimer);
         Integer rt = (logic.getRoundTime()*1000)+1000;
-        new CountDownTimer(rt, 1000) {
 
+        final CountDownTimer CDT = new CountDownTimer(rt, 1000){
             public void onTick(long millisUntilFinished) {
                 mTextField.setText("seconds remaining: " + Long.toString((millisUntilFinished / 1000)-1));
                 //here you can have your logic to set text to edittext
