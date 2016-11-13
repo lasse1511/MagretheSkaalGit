@@ -55,8 +55,6 @@ public class PlayScreen extends AppCompatActivity {
         final TextView mTextField = (TextView) findViewById(R.id.Countdowntimer);
 
 
-
-
         //Gemning af attributterne fra BW
         logic.NamesOrg = getIntent().getExtras().getStringArrayList("NamesOrg");
         logic.NamesEdit = getIntent().getExtras().getStringArrayList("NamesEdit");
@@ -68,15 +66,6 @@ public class PlayScreen extends AppCompatActivity {
         logic.Team1Score = getIntent().getExtras().getInt("Team1Score");
         logic.Team2Score = getIntent().getExtras().getInt("Team2Score");
 
-        //Dette sker når vi trykker på pause
-        pause.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view)
-            {
-
-            }
-        });
-
 
 
         //Rundetiden hentes fra logiklaget
@@ -86,6 +75,7 @@ public class PlayScreen extends AppCompatActivity {
         final CountDownTimer CDT = new CountDownTimer(rt, 1000){
             public void onTick(long millisUntilFinished) {
                 mTextField.setText("Seconds remaining: " + Long.toString((millisUntilFinished / 1000)-1));
+
                 //here you can have your logic to set text to edittext
                 if((millisUntilFinished/1000)==1)
                 {
@@ -117,6 +107,97 @@ public class PlayScreen extends AppCompatActivity {
 
         }.start();
 
+
+
+        final Intent isEnd = new Intent(this, CreateGame.class);
+        final AlertDialog.Builder SureAlert = new  AlertDialog.Builder(this);
+        SureAlert.setTitle("Sure?");
+        SureAlert.setMessage("Are you sure?");
+        SureAlert.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+            startActivity(isEnd);
+
+            }
+        });
+        SureAlert.setNegativeButton("No",new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+
+
+            }
+        });
+        final AlertDialog SureEnd = SureAlert.create();
+
+
+        final AlertDialog.Builder SureSkipBuild = new  AlertDialog.Builder(this);
+        SureSkipBuild.setTitle("Sure?");
+        SureSkipBuild.setMessage("Are you sure?");
+        SureSkipBuild.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                CDT.cancel();
+                right.setActivated(false);
+                pass.setActivated(false);
+                logic.RoundType.remove(0);
+                logic.NamesEdit = logic.NamesOrg;
+                logic.RoundCounter++;
+                i.putExtra("NamesOrg", logic.NamesOrg);
+                i.putExtra("NamesEdit", logic.NamesEdit);
+                i.putStringArrayListExtra("RoundType", logic.RoundType);
+                i.putExtra("RoundTime", logic.RoundTime);
+                i.putExtra("Team1Score", logic.Team1Score);
+                i.putExtra("Team2Score", logic.Team2Score);
+                i.putExtra("RoundCounter", logic.RoundCounter);
+                i.putExtra("Team1Score", logic.Team1Score);
+                i.putExtra("Team2Score", logic.Team2Score);
+                startActivity(i);
+
+            }
+        });
+        SureSkipBuild.setNegativeButton("No",new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+
+
+            }
+        });
+        final AlertDialog SureSkip = SureSkipBuild.create();
+
+        //set pause alert
+        final AlertDialog.Builder PauseAlert = new AlertDialog.Builder(this);
+
+
+        PauseAlert.setTitle("Pause");
+        PauseAlert.setMessage("Pause");
+
+        PauseAlert.setNegativeButton("Skip Round", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+
+                SureSkip.show();
+            }
+        });
+        PauseAlert.setPositiveButton("Resume", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+
+            CDT.start();
+
+            }
+        });
+        PauseAlert.setNeutralButton("End Game", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+
+                SureEnd.show();
+            }
+        });
+        final AlertDialog PauseA = PauseAlert.create();
+
+
+        //Dette sker når vi trykker på pause
+        pause.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view)
+            {
+                PauseA.show();
+                CDT.cancel();
+            }
+        });
 
         //Visning af det første navn
         if (logic.NamesEdit.size() > 1)
