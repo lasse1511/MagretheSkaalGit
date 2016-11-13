@@ -26,6 +26,8 @@ public class BetweenScreen extends AppCompatActivity {
 
         TextView Team1Score = (TextView) findViewById(R.id.Text_Team1Score);
         TextView Team2Score = (TextView) findViewById(R.id.Text_Team2score);
+        TextView WhosRound = (TextView) findViewById(R.id.Text_WhosRound);
+        TextView WhichRound = (TextView) findViewById(R.id.Text_RoundBetween);
 
         int T1S = logic.Team1Score;
         int T2S = logic.Team2Score;
@@ -33,6 +35,13 @@ public class BetweenScreen extends AppCompatActivity {
 
         Team1Score.setText("Team 1 score: " + Integer.toString(T1S));
         Team2Score.setText("Team 2 score: " + Integer.toString(T2S));
+
+        if (logic.RoundCounter % 2 == 0)
+            WhosRound.setText("Team 1 - get ready!");
+        else if (logic.RoundCounter % 2 == 1)
+            WhosRound.setText("Team 2 - get ready!");
+
+        WhichRound.setText(logic.RoundType.get(0).toString());
 
 
         Button next = (Button) findViewById(R.id.BTN_StartBetween);

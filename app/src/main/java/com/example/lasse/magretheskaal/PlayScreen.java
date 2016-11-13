@@ -39,7 +39,10 @@ public class PlayScreen extends AppCompatActivity {
         final TextView names = (TextView) findViewById(R.id.text_namesPlay);
         final Button right = (Button) findViewById(R.id.BTN_right);
         final Button pass = (Button) findViewById(R.id.BTN_pass);
-        final Intent i = new Intent(PlayScreen.this, BetweenScreen.class);
+
+        //Initiering af Intents
+        final Intent i = new Intent(this, BetweenScreen.class);
+        final Intent iEnd = new Intent(this,EndScreen.class);
 
         //Gemning af attributterne fra BW
         logic.NamesOrg = getIntent().getExtras().getStringArrayList("NamesOrg");
@@ -90,20 +93,32 @@ public class PlayScreen extends AppCompatActivity {
                 }
                 else if (logic.NamesEdit.size() == 0)
                 {
-                    alert1.show();
-                    right.setActivated(false);
-                    pass.setActivated(false);
-                    logic.RoundCounter++;
-                    i.putExtra("NamesOrg", logic.NamesOrg);
-                    i.putExtra("NamesEdit", logic.NamesEdit);
-                    i.putStringArrayListExtra("RoundType", logic.RoundType);
-                    i.putExtra("RoundTime", logic.RoundTime);
-                    i.putExtra("Team1Score", logic.Team1Score);
-                    i.putExtra("Team2Score", logic.Team2Score);
-                    i.putExtra("RoundCounter", logic.RoundCounter);
-                    i.putExtra("Team1Score", logic.Team1Score);
-                    i.putExtra("Team2Score", logic.Team2Score);
-                    startActivity(i);
+                    if (logic.RoundType.size() == 1)
+                    {
+                        iEnd.putExtra("Team1Score", logic.Team1Score);
+                        iEnd.putExtra("Team2Score", logic.Team2Score);
+                        iEnd.putExtra("NamesOrg", logic.NamesOrg);
+                        startActivity(iEnd);
+                    }
+                    else
+                    {
+                        alert1.show();
+                        right.setActivated(false);
+                        pass.setActivated(false);
+                        logic.RoundType.remove(0);
+                        logic.NamesEdit = logic.NamesOrg;
+                        logic.RoundCounter++;
+                        i.putExtra("NamesOrg", logic.NamesOrg);
+                        i.putExtra("NamesEdit", logic.NamesEdit);
+                        i.putStringArrayListExtra("RoundType", logic.RoundType);
+                        i.putExtra("RoundTime", logic.RoundTime);
+                        i.putExtra("Team1Score", logic.Team1Score);
+                        i.putExtra("Team2Score", logic.Team2Score);
+                        i.putExtra("RoundCounter", logic.RoundCounter);
+                        i.putExtra("Team1Score", logic.Team1Score);
+                        i.putExtra("Team2Score", logic.Team2Score);
+                        startActivity(i);
+                    }
                 }
             }
         });
@@ -132,6 +147,7 @@ public class PlayScreen extends AppCompatActivity {
                if((millisUntilFinished/1000)==1)
                 {
                     alert.show();
+                    logic.RoundCounter++;
                     right.setActivated(false);
                     pass.setActivated(false);
                     i.putExtra("NamesOrg", logic.NamesOrg);
