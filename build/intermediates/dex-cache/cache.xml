@@ -2,184 +2,166 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.0.0_31a9bd75c5e1384de9ab7847fd5178551483ed03\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.0_e14f746527e20e20d26804cf3b333c69d6a8b8ea\classes.dex" />
+        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.0.0_e14f746527e20e20d26804cf3b333c69d6a8b8ea.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="373ed1c85bc0dfa8c90e34d6bd074506aec5372e">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_3775bbe9cc5b6d5918c9c919d61e31b1cabca061\classes.dex" />
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.0.0_31a9bd75c5e1384de9ab7847fd5178551483ed03.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c472eaaa52691d168f2d2867d1e9a0cc54005fe8">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_7ec59e90ef71cadd1c42fde641d8021799aa7877\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\design\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.0.0_f28a232f6add68a6d48d0fe7da98516daf5b288a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.0.0_1c3ae6168734b1687162e6f28393c2f5ef596ebe\classes.dex" />
+        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.0.0_1c3ae6168734b1687162e6f28393c2f5ef596ebe.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\transition\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.0.0_324efa71dee3e6690cd5e5ac596275351e5f420e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_4f84c3dcde95ca795abad2dadc201141908f9183\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_fb08d350d602f8b304ce55ea42bab4ccb8022079\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.0_be3bd8196259935e9cb75087ed5ee77de633210f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_0b405c014379aedf7f8425d7b0c78fb3d8a371d5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.0.0_aba3a85ac664979ded38edf8d40dd8a7a77ea136\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.0.0_dbfbdd04d11cce604a966e85496398addfab7411\classes.dex" />
+        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.0.0_dbfbdd04d11cce604a966e85496398addfab7411.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_fa8d4b54d2586b6027831ef06f74e40c1f5411b3\classes.dex" />
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_4f84c3dcde95ca795abad2dadc201141908f9183.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\transition\25.0.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.0.0_dc66e5b7483110443de83cd023e0d48d66c91482\classes.dex" />
+        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
+        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.0.0_324efa71dee3e6690cd5e5ac596275351e5f420e.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.0.0_b49dd0167fd69258d28af7dd8b945abe7feb3a68\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_6ccaa7c20d5cbcadfa096ae8bab0bff5a571a33d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.0.0_7b09faa64fab2eb061511561489677ca329267e2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\Users\Daniel\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.0\support-annotations-25.0.0.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.0_26b9b060eee993882bc1ab66773adc9a703bb069\classes.dex" />
+        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\pre-dexed\debug\support-annotations-25.0.0_26b9b060eee993882bc1ab66773adc9a703bb069.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
+        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_fa8d4b54d2586b6027831ef06f74e40c1f5411b3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.0.0_be3bd8196259935e9cb75087ed5ee77de633210f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.0.0_aba3a85ac664979ded38edf8d40dd8a7a77ea136.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\design\25.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
+        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\pre-dexed\debug\com.android.support-design-25.0.0_f28a232f6add68a6d48d0fe7da98516daf5b288a.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="26674000177e45447a0326a6ad84612761199a13">
-        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.0_acda3cb688abd960d02bb36d43b91d361ea67b5e\classes.dex" />
+        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.0.0_acda3cb688abd960d02bb36d43b91d361ea67b5e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_0b405c014379aedf7f8425d7b0c78fb3d8a371d5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.0.0_b49dd0167fd69258d28af7dd8b945abe7feb3a68.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
+        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.0.0_7b09faa64fab2eb061511561489677ca329267e2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_6ccaa7c20d5cbcadfa096ae8bab0bff5a571a33d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_fb08d350d602f8b304ce55ea42bab4ccb8022079.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="C:\Users\Daniel\Documents\GitHub\MagretheSkaalGit\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.0.0_dc66e5b7483110443de83cd023e0d48d66c91482.jar" />
     </item>
 
 </items>
