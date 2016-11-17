@@ -17,6 +17,8 @@ public class PlayScreen extends AppCompatActivity {
     private LogicLayer logic = new LogicLayer();
     int index = 0;
     Random rand = new Random();
+    private int rt;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,8 @@ public class PlayScreen extends AppCompatActivity {
         setContentView(R.layout.activity_play_screen);
         final  AlertDialog.Builder builder = new AlertDialog.Builder(PlayScreen.this);
         final  AlertDialog.Builder builder1 = new AlertDialog.Builder(PlayScreen.this);
+
+        //Den rundetid som gemmes når man trykker pause
 
 
         //Initiering af Intents
@@ -69,12 +73,13 @@ public class PlayScreen extends AppCompatActivity {
 
 
         //Rundetiden hentes fra logiklaget
-        Integer rt = (logic.getRoundTime()*1000)+1000;
+        rt = (logic.getRoundTime()*1000)+1000;
 
         //En nedtælling starter og ved 1 sekund tilbage begynder processen om at samle intent
         final CountDownTimer CDT = new CountDownTimer(rt, 1000){
             public void onTick(long millisUntilFinished) {
                 mTextField.setText("Seconds remaining: " + Long.toString((millisUntilFinished / 1000)-1));
+                rt =- 1000;
 
                 //here you can have your logic to set text to edittext
                 if((millisUntilFinished/1000)==1)
@@ -98,8 +103,6 @@ public class PlayScreen extends AppCompatActivity {
 
         //Når tidtælleren er færdig startes aktivitet som blev redigeret ovenover
             public void onFinish() {
-
-
                 startActivity(i);
                 alert.dismiss();
             }
@@ -121,48 +124,58 @@ public class PlayScreen extends AppCompatActivity {
         });
         SureAlert.setNegativeButton("No",new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
+                CDT.start();
 
 
             }
         });
+
+        //Bestemmer hvad der sker når man trykker "Skip Round"
         final AlertDialog SureEnd = SureAlert.create();
-
-
         final AlertDialog.Builder SureSkipBuild = new  AlertDialog.Builder(this);
         SureSkipBuild.setTitle("Sure?");
         SureSkipBuild.setMessage("Are you sure?");
         SureSkipBuild.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                CDT.cancel();
-                right.setActivated(false);
-                pass.setActivated(false);
                 logic.RoundType.remove(0);
-                logic.NamesEdit = logic.NamesOrg;
-                logic.RoundCounter++;
-                i.putExtra("NamesOrg", logic.NamesOrg);
-                i.putExtra("NamesEdit", logic.NamesEdit);
-                i.putStringArrayListExtra("RoundType", logic.RoundType);
-                i.putExtra("RoundTime", logic.RoundTime);
-                i.putExtra("Team1Score", logic.Team1Score);
-                i.putExtra("Team2Score", logic.Team2Score);
-                i.putExtra("RoundCounter", logic.RoundCounter);
-                i.putExtra("Team1Score", logic.Team1Score);
-                i.putExtra("Team2Score", logic.Team2Score);
-                startActivity(i);
+
+                if (logic.RoundType.size() == 0)
+                {
+                    iEnd.putExtra("NamesOrg", logic.NamesOrg);
+                    iEnd.putExtra("Team1Score", logic.Team1Score);
+                    iEnd.putExtra("Team2Score", logic.Team2Score);
+                    startActivity(iEnd);
+
+                }
+                else {
+                    CDT.cancel();
+                    right.setActivated(false);
+                    pass.setActivated(false);
+                    logic.NamesEdit = logic.NamesOrg;
+                    logic.RoundCounter++;
+                    i.putExtra("NamesOrg", logic.NamesOrg);
+                    i.putExtra("NamesEdit", logic.NamesEdit);
+                    i.putStringArrayListExtra("RoundType", logic.RoundType);
+                    i.putExtra("RoundTime", logic.RoundTime);
+                    i.putExtra("Team1Score", logic.Team1Score);
+                    i.putExtra("Team2Score", logic.Team2Score);
+                    i.putExtra("RoundCounter", logic.RoundCounter);
+                    i.putExtra("Team1Score", logic.Team1Score);
+                    i.putExtra("Team2Score", logic.Team2Score);
+                    startActivity(i);
+                }
 
             }
         });
         SureSkipBuild.setNegativeButton("No",new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-
-
+                CDT.start();
             }
         });
         final AlertDialog SureSkip = SureSkipBuild.create();
 
         //set pause alert
         final AlertDialog.Builder PauseAlert = new AlertDialog.Builder(this);
-
 
         PauseAlert.setTitle("Pause");
         PauseAlert.setMessage("Pause");

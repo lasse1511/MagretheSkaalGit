@@ -163,6 +163,14 @@ public class SetupGame extends AppCompatActivity {
         }
 
 
+    //Når tilbageknappen trykkes vises der altid tilbagetil frontskærmen
+    @Override
+    public void onBackPressed()
+    {
+        Intent iBack = new Intent(this, CreateGame.class);
+        startActivity(iBack);
+
+    }
 
 
 
