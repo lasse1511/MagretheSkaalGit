@@ -18,26 +18,40 @@ public class PlayScreen extends AppCompatActivity {
     int index = 0;
     Random rand = new Random();
     private int rt;
+    TextView names;
+    AlertDialog.Builder builder;
+    AlertDialog.Builder builder1;
+    AlertDialog alert;
 
+    Intent i;
+    Intent iEnd;
+
+
+
+    Button right;
+    Button pass;
+    Button pause;
+    TextView mTextField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_screen);
-        final  AlertDialog.Builder builder = new AlertDialog.Builder(PlayScreen.this);
-        final  AlertDialog.Builder builder1 = new AlertDialog.Builder(PlayScreen.this);
+
+        builder = new AlertDialog.Builder(PlayScreen.this);
+        builder1 = new AlertDialog.Builder(PlayScreen.this);
 
         //Den rundetid som gemmes når man trykker pause
 
 
         //Initiering af Intents
-        final Intent i = new Intent(this, BetweenScreen.class);
-        final Intent iEnd = new Intent(this,EndScreen.class);
+        i = new Intent(this, BetweenScreen.class);
+        iEnd = new Intent(this,EndScreen.class);
 
         //De to meddelelser som popper op i PS
         builder.setTitle("Round Finished");
         builder.setMessage("Next round");
-        final AlertDialog alert = builder.create();
+        alert = builder.create();
 
         builder1.setTitle("Round Finished");
         builder1.setMessage("No more names in list");
@@ -52,11 +66,11 @@ public class PlayScreen extends AppCompatActivity {
 
 
         //Initiering af diverse knapper osv.
-        final TextView names = (TextView) findViewById(R.id.text_namesPlay);
-        final Button right = (Button) findViewById(R.id.BTN_right);
-        final Button pass = (Button) findViewById(R.id.BTN_pass);
-        final Button pause = (Button) findViewById(R.id.BTN_PlayPAUSE);
-        final TextView mTextField = (TextView) findViewById(R.id.Countdowntimer);
+        names = (TextView) findViewById(R.id.text_namesPlay);
+        right = (Button) findViewById(R.id.BTN_right);
+        pass = (Button) findViewById(R.id.BTN_pass);
+        pause = (Button) findViewById(R.id.BTN_PlayPAUSE);
+        mTextField = (TextView) findViewById(R.id.Countdowntimer);
 
 
         //Gemning af attributterne fra BW
