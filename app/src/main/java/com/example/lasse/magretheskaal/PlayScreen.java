@@ -22,6 +22,9 @@ public class PlayScreen extends AppCompatActivity {
     AlertDialog.Builder builder;
     AlertDialog.Builder builder1;
     AlertDialog alert;
+    AlertDialog alert1;
+    AlertDialog PauseA;
+    AlertDialog.Builder PauseAlert;
 
     Intent i;
     Intent iEnd;
@@ -61,7 +64,11 @@ public class PlayScreen extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        final AlertDialog alert1 = builder1.create();
+        alert1 = builder1.create();
+
+        //set pause alert
+        PauseAlert = new AlertDialog.Builder(this);
+
 
 
 
@@ -104,14 +111,14 @@ public class PlayScreen extends AppCompatActivity {
         });
         SureAlert.setNegativeButton("No",new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                rt += 1000;
-                CDT = cTimer();
-                CDT.start();
+                PauseA.show();
             }
         });
+        final AlertDialog SureEnd = SureAlert.create();
+
+
 
         //Bestemmer hvad der sker når man trykker "Skip Round"
-        final AlertDialog SureEnd = SureAlert.create();
         final AlertDialog.Builder SureSkipBuild = new  AlertDialog.Builder(this);
         SureSkipBuild.setTitle("Sure?");
         SureSkipBuild.setMessage("Are you sure?");
@@ -148,19 +155,13 @@ public class PlayScreen extends AppCompatActivity {
         });
         SureSkipBuild.setNegativeButton("No",new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                rt += 1000;
-                CDT = cTimer();
-                CDT.start();
+                PauseA.show();
             }
         });
         final AlertDialog SureSkip = SureSkipBuild.create();
 
-        //set pause alert
-        final AlertDialog.Builder PauseAlert = new AlertDialog.Builder(this);
 
-        PauseAlert.setTitle("Pause");
-        PauseAlert.setMessage("Pause");
-
+        //Bygger pauseknappen/dialogen
         PauseAlert.setNegativeButton("Skip Round", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
 
@@ -172,7 +173,6 @@ public class PlayScreen extends AppCompatActivity {
                 rt += 1000;
                 CDT = cTimer();
                 CDT.start();
-
             }
         });
         PauseAlert.setNeutralButton("End Game", new DialogInterface.OnClickListener() {
@@ -181,7 +181,9 @@ public class PlayScreen extends AppCompatActivity {
                 SureEnd.show();
             }
         });
-        final AlertDialog PauseA = PauseAlert.create();
+        PauseAlert.setTitle("Pause");
+        PauseAlert.setMessage("Pause");
+        PauseA = PauseAlert.create();
 
 
 
