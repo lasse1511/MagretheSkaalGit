@@ -70,5 +70,4 @@ public class LogicLayer /* implements Parcelable */ {
     }
 
 
-
 }

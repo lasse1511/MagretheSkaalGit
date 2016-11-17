@@ -70,8 +70,6 @@ public class PlayScreen extends AppCompatActivity {
         PauseAlert = new AlertDialog.Builder(this);
 
 
-
-
         //Initiering af diverse knapper osv.
         names = (TextView) findViewById(R.id.text_namesPlay);
         right = (Button) findViewById(R.id.BTN_right);
@@ -79,18 +77,8 @@ public class PlayScreen extends AppCompatActivity {
         pause = (Button) findViewById(R.id.BTN_PlayPAUSE);
         mTextField = (TextView) findViewById(R.id.Countdowntimer);
 
-
-        //Gemning af attributterne fra BW
-        logic.NamesOrg = getIntent().getExtras().getStringArrayList("NamesOrg");
-        logic.NamesEdit = getIntent().getExtras().getStringArrayList("NamesEdit");
-        logic.RoundTime =getIntent().getExtras().getInt("RoundTime");
-        logic.RoundType = getIntent().getExtras().getStringArrayList("RoundType");
-        logic.Team1Score = getIntent().getExtras().getInt("Team1Score");
-        logic.Team2Score = getIntent().getExtras().getInt("Team2Score");
-        logic.RoundCounter = getIntent().getExtras().getInt("RoundCounter");
-        logic.Team1Score = getIntent().getExtras().getInt("Team1Score");
-        logic.Team2Score = getIntent().getExtras().getInt("Team2Score");
-
+        //Custom metode som sætter det lokale logikobjekts attributter til hvad end intentet smider med
+        getIntentExtras();
 
 
         //Rundetiden hentes fra logiklaget
@@ -99,6 +87,7 @@ public class PlayScreen extends AppCompatActivity {
         CDT = cTimer();
         CDT.start();
 
+        //Bestemmer hvad der sker når man trykker "End game"
         final Intent isEnd = new Intent(this, CreateGame.class);
         final AlertDialog.Builder SureAlert = new  AlertDialog.Builder(this);
         SureAlert.setTitle("Sure?");
@@ -128,9 +117,7 @@ public class PlayScreen extends AppCompatActivity {
 
                 if (logic.RoundType.size() == 0)
                 {
-                    iEnd.putExtra("NamesOrg", logic.NamesOrg);
-                    iEnd.putExtra("Team1Score", logic.Team1Score);
-                    iEnd.putExtra("Team2Score", logic.Team2Score);
+                    updateIntentEnd();
                     startActivity(iEnd);
 
                 }
@@ -139,15 +126,7 @@ public class PlayScreen extends AppCompatActivity {
                     pass.setActivated(false);
                     logic.NamesEdit = logic.NamesOrg;
                     logic.RoundCounter++;
-                    i.putExtra("NamesOrg", logic.NamesOrg);
-                    i.putExtra("NamesEdit", logic.NamesEdit);
-                    i.putStringArrayListExtra("RoundType", logic.RoundType);
-                    i.putExtra("RoundTime", logic.RoundTime);
-                    i.putExtra("Team1Score", logic.Team1Score);
-                    i.putExtra("Team2Score", logic.Team2Score);
-                    i.putExtra("RoundCounter", logic.RoundCounter);
-                    i.putExtra("Team1Score", logic.Team1Score);
-                    i.putExtra("Team2Score", logic.Team2Score);
+                    updateIntentAll();
                     startActivity(i);
                 }
 
@@ -236,9 +215,7 @@ public class PlayScreen extends AppCompatActivity {
                 {
                     if (logic.RoundType.size() == 1)
                     {
-                        iEnd.putExtra("Team1Score", logic.Team1Score);
-                        iEnd.putExtra("Team2Score", logic.Team2Score);
-                        iEnd.putExtra("NamesOrg", logic.NamesOrg);
+                        updateIntentEnd();
                         CDT.cancel();
                         startActivity(iEnd);
                     }
@@ -251,15 +228,7 @@ public class PlayScreen extends AppCompatActivity {
                         logic.RoundType.remove(0);
                         logic.NamesEdit = logic.NamesOrg;
                         logic.RoundCounter++;
-                        i.putExtra("NamesOrg", logic.NamesOrg);
-                        i.putExtra("NamesEdit", logic.NamesEdit);
-                        i.putStringArrayListExtra("RoundType", logic.RoundType);
-                        i.putExtra("RoundTime", logic.RoundTime);
-                        i.putExtra("Team1Score", logic.Team1Score);
-                        i.putExtra("Team2Score", logic.Team2Score);
-                        i.putExtra("RoundCounter", logic.RoundCounter);
-                        i.putExtra("Team1Score", logic.Team1Score);
-                        i.putExtra("Team2Score", logic.Team2Score);
+                        updateIntentAll();
                     }
                 }
             }
@@ -278,6 +247,41 @@ public class PlayScreen extends AppCompatActivity {
         });
 
         }
+
+
+    public void updateIntentEnd()
+    {
+        iEnd.putExtra("Team1Score", logic.Team1Score);
+        iEnd.putExtra("Team2Score", logic.Team2Score);
+        iEnd.putExtra("NamesOrg", logic.NamesOrg);
+    }
+
+    public void updateIntentAll()
+    {
+        i.putExtra("NamesOrg", logic.NamesOrg);
+        i.putExtra("NamesEdit", logic.NamesEdit);
+        i.putStringArrayListExtra("RoundType", logic.RoundType);
+        i.putExtra("RoundTime", logic.RoundTime);
+        i.putExtra("Team1Score", logic.Team1Score);
+        i.putExtra("Team2Score", logic.Team2Score);
+        i.putExtra("RoundCounter", logic.RoundCounter);
+        i.putExtra("Team1Score", logic.Team1Score);
+        i.putExtra("Team2Score", logic.Team2Score);
+    }
+
+    public void getIntentExtras()
+    {
+        logic.NamesOrg = getIntent().getExtras().getStringArrayList("NamesOrg");
+        logic.NamesEdit = getIntent().getExtras().getStringArrayList("NamesEdit");
+        logic.RoundTime =getIntent().getExtras().getInt("RoundTime");
+        logic.RoundType = getIntent().getExtras().getStringArrayList("RoundType");
+        logic.Team1Score = getIntent().getExtras().getInt("Team1Score");
+        logic.Team2Score = getIntent().getExtras().getInt("Team2Score");
+        logic.RoundCounter = getIntent().getExtras().getInt("RoundCounter");
+        logic.Team1Score = getIntent().getExtras().getInt("Team1Score");
+        logic.Team2Score = getIntent().getExtras().getInt("Team2Score");
+
+    }
 
 
     public CountDownTimer cTimer()
