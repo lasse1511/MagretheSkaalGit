@@ -17,7 +17,7 @@ public class PlayScreen extends AppCompatActivity {
     private LogicLayer logic = new LogicLayer();
     int index = 0;
     Random rand = new Random();
-    private int rt;
+    int rt;
     TextView names;
     AlertDialog.Builder builder;
     AlertDialog.Builder builder1;
@@ -26,7 +26,7 @@ public class PlayScreen extends AppCompatActivity {
     Intent i;
     Intent iEnd;
 
-
+    CountDownTimer CDT;
 
     Button right;
     Button pass;
@@ -89,42 +89,8 @@ public class PlayScreen extends AppCompatActivity {
         //Rundetiden hentes fra logiklaget
         rt = (logic.getRoundTime()*1000)+1000;
 
-        //En nedtælling starter og ved 1 sekund tilbage begynder processen om at samle intent
-        final CountDownTimer CDT = new CountDownTimer(rt, 1000){
-            public void onTick(long millisUntilFinished) {
-                mTextField.setText("Seconds remaining: " + Long.toString((millisUntilFinished / 1000)-1));
-                rt =- 1000;
-
-                //here you can have your logic to set text to edittext
-                if((millisUntilFinished/1000)==1)
-                {
-                    alert.show();
-                    logic.RoundCounter++;
-                    right.setActivated(false);
-                    pass.setActivated(false);
-                    i.putExtra("NamesOrg", logic.NamesOrg);
-                    i.putExtra("NamesEdit", logic.NamesEdit);
-                    i.putStringArrayListExtra("RoundType", logic.RoundType);
-                    i.putExtra("RoundTime", logic.RoundTime);
-                    i.putExtra("Team1Score", logic.Team1Score);
-                    i.putExtra("Team2Score", logic.Team2Score);
-                    i.putExtra("RoundCounter", logic.RoundCounter);
-                    i.putExtra("Team1Score", logic.Team1Score);
-                    i.putExtra("Team2Score", logic.Team2Score);
-                }
-            }
-
-
-        //Når tidtælleren er færdig startes aktivitet som blev redigeret ovenover
-            public void onFinish() {
-                startActivity(i);
-                alert.dismiss();
-            }
-
-
-        }.start();
-
-
+        CDT = cTimer();
+        CDT.start();
 
         final Intent isEnd = new Intent(this, CreateGame.class);
         final AlertDialog.Builder SureAlert = new  AlertDialog.Builder(this);
@@ -138,9 +104,9 @@ public class PlayScreen extends AppCompatActivity {
         });
         SureAlert.setNegativeButton("No",new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
+                rt += 1000;
+                CDT = cTimer();
                 CDT.start();
-
-
             }
         });
 
@@ -162,7 +128,6 @@ public class PlayScreen extends AppCompatActivity {
 
                 }
                 else {
-                    CDT.cancel();
                     right.setActivated(false);
                     pass.setActivated(false);
                     logic.NamesEdit = logic.NamesOrg;
@@ -183,6 +148,8 @@ public class PlayScreen extends AppCompatActivity {
         });
         SureSkipBuild.setNegativeButton("No",new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
+                rt += 1000;
+                CDT = cTimer();
                 CDT.start();
             }
         });
@@ -202,8 +169,9 @@ public class PlayScreen extends AppCompatActivity {
         });
         PauseAlert.setPositiveButton("Resume", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-
-            CDT.start();
+                rt += 1000;
+                CDT = cTimer();
+                CDT.start();
 
             }
         });
@@ -216,6 +184,7 @@ public class PlayScreen extends AppCompatActivity {
         final AlertDialog PauseA = PauseAlert.create();
 
 
+
         //Dette sker når vi trykker på pause
         pause.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -223,6 +192,7 @@ public class PlayScreen extends AppCompatActivity {
             {
                 PauseA.show();
                 CDT.cancel();
+
             }
         });
 
@@ -306,6 +276,49 @@ public class PlayScreen extends AppCompatActivity {
         });
 
         }
+
+
+    public CountDownTimer cTimer()
+    {
+
+        //En nedtælling starter og ved 1 sekund tilbage begynder processen om at samle intent
+        final CountDownTimer CDT = new CountDownTimer(rt, 1000){
+            public void onTick(long millisUntilFinished) {
+                mTextField.setText("Seconds remaining: " + Long.toString((millisUntilFinished / 1000)-1));
+                rt = rt - 1000;
+                //here you can have your logic to set text to edittext
+                if((millisUntilFinished/1000)==1)
+                {
+                    alert.show();
+                    logic.RoundCounter++;
+                    right.setActivated(false);
+                    pass.setActivated(false);
+                    i.putExtra("NamesOrg", logic.NamesOrg);
+                    i.putExtra("NamesEdit", logic.NamesEdit);
+                    i.putStringArrayListExtra("RoundType", logic.RoundType);
+                    i.putExtra("RoundTime", logic.RoundTime);
+                    i.putExtra("Team1Score", logic.Team1Score);
+                    i.putExtra("Team2Score", logic.Team2Score);
+                    i.putExtra("RoundCounter", logic.RoundCounter);
+                    i.putExtra("Team1Score", logic.Team1Score);
+                    i.putExtra("Team2Score", logic.Team2Score);
+                }
+            }
+
+
+            //Når tidtælleren er færdig startes aktivitet som blev redigeret ovenover
+            public void onFinish() {
+                startActivity(i);
+                alert.dismiss();
+            }
+
+
+        };
+
+        return CDT;
+
+    }
+
 
     //Disabling af tilbageknappen i PS
     @Override
