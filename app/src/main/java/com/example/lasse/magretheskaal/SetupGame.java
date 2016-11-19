@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.NumberPicker;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -18,11 +19,24 @@ public class SetupGame extends AppCompatActivity {
 
     private LogicLayer logic = new LogicLayer();
 
+    TextView info1;
+    TextView info2;
+    TextView info3;
+    TextView info4;
+    TextView info5;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup_game);
+
+        info1 = (TextView) findViewById(R.id.Text_SetupInfo1);
+        info2 = (TextView) findViewById(R.id.Text_SetupInfo2);
+        info3 = (TextView) findViewById(R.id.Text_SetupInfo3);
+        info4 = (TextView) findViewById(R.id.Text_SetupInfo4);
+        info5 = (TextView) findViewById(R.id.Text_SetupInfo5);
+
 
         //set diverse objekter på interfacet
         final NumberPicker np = (NumberPicker) findViewById(R.id.numberPicker);
@@ -42,11 +56,29 @@ public class SetupGame extends AppCompatActivity {
         FreeS.setChecked(true);
 
         // vis infp
-        Button info2 = (Button) findViewById(R.id.BTN_Info2);
-        info2.setOnClickListener(new View.OnClickListener() {
+        Button info2_BTN = (Button) findViewById(R.id.BTN_Info2);
+        info2_BTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SetupGame.this, Info2.class));
+                //startActivity(new Intent(SetupGame.this, Info2.class));
+                if (info1.getVisibility() == View.VISIBLE)
+                {
+                    info1.setVisibility(View.INVISIBLE);
+                    info2.setVisibility(View.INVISIBLE);
+                    info3.setVisibility(View.INVISIBLE);
+                    info4.setVisibility(View.INVISIBLE);
+                    info5.setVisibility(View.INVISIBLE);
+
+                }
+                else {
+                    info1.setVisibility(View.VISIBLE);
+                    info2.setVisibility(View.VISIBLE);
+                    info3.setVisibility(View.VISIBLE);
+                    info4.setVisibility(View.VISIBLE);
+                    info5.setVisibility(View.VISIBLE);
+
+                }
+
             }
         });
 

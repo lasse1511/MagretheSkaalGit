@@ -87,4 +87,58 @@
         android:layout_marginTop="52dp"
         android:layout_alignParentEnd="true" />
 
+    <TextView
+        android:text="Use this to set time for each round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/BTN_Info2"
+        android:layout_alignParentStart="true"
+        android:id="@+id/Text_SetupInfo1"
+        android:layout_alignEnd="@+id/checkBox2"
+        android:visibility="invisible" />
+
+    <TextView
+        android:text="One can use free speech, except the actual name."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Text_SetupInfo2"
+        android:textSize="10sp"
+        android:layout_alignBaseline="@+id/checkBox2"
+        android:layout_alignBottom="@+id/checkBox2"
+        android:layout_toEndOf="@+id/checkBox7"
+        android:visibility="invisible" />
+
+    <TextView
+        android:text="One can use free speech, except the actual name."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Text_SetupInfo3"
+        android:textSize="10sp"
+        android:layout_alignBaseline="@+id/checkBox5"
+        android:layout_alignBottom="@+id/checkBox5"
+        android:layout_alignStart="@+id/Text_SetupInfo2"
+        android:visibility="invisible" />
+
+    <TextView
+        android:text="One can use free speech, except the actual name."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Text_SetupInfo4"
+        android:textSize="10sp"
+        android:layout_alignBaseline="@+id/checkBox6"
+        android:layout_alignBottom="@+id/checkBox6"
+        android:layout_toEndOf="@+id/checkBox7"
+        android:visibility="invisible" />
+
+    <TextView
+        android:text="One can use free speech, except the actual name."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Text_SetupInfo5"
+        android:textSize="10sp"
+        android:layout_alignBaseline="@+id/checkBox7"
+        android:layout_alignBottom="@+id/checkBox7"
+        android:layout_toEndOf="@+id/checkBox7"
+        android:visibility="invisible" />
+
 </RelativeLayout>
