@@ -52,7 +52,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="a2412b92a726851a2f669b9a7dc243520c681c41">
+        sha1="b99c555ae9f11c1ee96a833921290107c9d3ba7a">
         <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1eafa6d08590d96cd107a53e01c71157ebecc8b1\classes.dex" />
     </item>
     <item
@@ -151,7 +151,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="44de172287961da5c3135748172892c2211c0841">
+        sha1="c158b6d2403da469dffa2472a5391ec364114bde">
         <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6b92dde5d905be9bb08f5429879d5e2de8b72316\classes.dex" />
     </item>
     <item

@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 public class SendNames extends AppCompatActivity {
 
     LogicLayer logic = new LogicLayer();
+    String gameName;
 
 
     @Override
@@ -34,6 +36,11 @@ public class SendNames extends AppCompatActivity {
 
         logic.RoundTime = getIntent().getExtras().getInt("RoundTime");
         logic.RoundType = getIntent().getExtras().getStringArrayList("RoundType");
+        gameName = getIntent().getExtras().getString("gameName");
+
+        //Sætter titlen på siden
+        Toolbar toolb = (Toolbar) findViewById(R.id.toolbar);
+        toolb.setTitle(gameName);
 
         Button next = (Button) findViewById(R.id.BTN_NextSend);
         next.setOnClickListener(new View.OnClickListener(){
@@ -113,7 +120,7 @@ public class SendNames extends AppCompatActivity {
         builder1.setMessage("Are you sure you want to go back? The list of names will be lost.");
         builder1.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-
+                i.putExtra("gameName", gameName);
                 startActivity(i);
             }
         });

@@ -88,14 +88,47 @@
         android:layout_alignParentEnd="true" />
 
     <TextView
-        android:text="Use this to set time for each round"
+        android:text="One can use the art of miming"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/BTN_Info2"
-        android:layout_alignParentStart="true"
+        android:id="@+id/Text_SetupInfo3"
+        android:textSize="10sp"
+        android:visibility="visible"
+        android:layout_alignBaseline="@+id/checkBox5"
+        android:layout_alignBottom="@+id/checkBox5"
+        android:layout_alignStart="@+id/Text_SetupInfo2" />
+
+    <TextView
+        android:text="Use this to set time for each round\n\n\n\n\n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/Text_SetupInfo1"
-        android:layout_alignEnd="@+id/checkBox2"
-        android:visibility="invisible" />
+        android:visibility="visible"
+        android:layout_alignBottom="@+id/numberPicker"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/BTN_next" />
+
+    <TextView
+        android:text="One can use only one word "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Text_SetupInfo4"
+        android:textSize="10sp"
+        android:visibility="visible"
+        android:layout_alignBaseline="@+id/checkBox6"
+        android:layout_alignBottom="@+id/checkBox6"
+        android:layout_alignStart="@+id/Text_SetupInfo3" />
+
+    <TextView
+        android:text="Define your own round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Text_SetupInfo5"
+        android:textSize="10sp"
+        android:visibility="visible"
+        android:layout_alignBaseline="@+id/checkBox7"
+        android:layout_alignBottom="@+id/checkBox7"
+        android:layout_alignStart="@+id/Text_SetupInfo4" />
 
     <TextView
         android:text="One can use free speech, except the actual name."
@@ -103,42 +136,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/Text_SetupInfo2"
         android:textSize="10sp"
+        android:visibility="visible"
         android:layout_alignBaseline="@+id/checkBox2"
         android:layout_alignBottom="@+id/checkBox2"
-        android:layout_toEndOf="@+id/checkBox7"
-        android:visibility="invisible" />
-
-    <TextView
-        android:text="One can use free speech, except the actual name."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Text_SetupInfo3"
-        android:textSize="10sp"
-        android:layout_alignBaseline="@+id/checkBox5"
-        android:layout_alignBottom="@+id/checkBox5"
-        android:layout_alignStart="@+id/Text_SetupInfo2"
-        android:visibility="invisible" />
-
-    <TextView
-        android:text="One can use free speech, except the actual name."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Text_SetupInfo4"
-        android:textSize="10sp"
-        android:layout_alignBaseline="@+id/checkBox6"
-        android:layout_alignBottom="@+id/checkBox6"
-        android:layout_toEndOf="@+id/checkBox7"
-        android:visibility="invisible" />
-
-    <TextView
-        android:text="One can use free speech, except the actual name."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Text_SetupInfo5"
-        android:textSize="10sp"
-        android:layout_alignBaseline="@+id/checkBox7"
-        android:layout_alignBottom="@+id/checkBox7"
-        android:layout_toEndOf="@+id/checkBox7"
-        android:visibility="invisible" />
+        android:layout_alignStart="@+id/numberPicker"
+        android:layout_marginStart="22dp" />
 
 </RelativeLayout>

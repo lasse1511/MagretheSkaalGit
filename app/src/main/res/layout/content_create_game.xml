@@ -13,17 +13,6 @@
     tools:context="com.example.lasse.magretheskaal.CreateGame"
     tools:showIn="@layout/activity_create_game">
 
-    <Button
-        android:text="Start game"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/BTN_start"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="88dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:enabled="true" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,4 +33,25 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="12dp" />
+
+    <Button
+        android:text="Create game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/BTN_create"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:enabled="true"
+        android:layout_marginBottom="78dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Join game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/BTN_join"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:enabled="true"
+        android:layout_above="@+id/BTN_create"
+        android:layout_alignStart="@+id/BTN_create" />
 </RelativeLayout>
