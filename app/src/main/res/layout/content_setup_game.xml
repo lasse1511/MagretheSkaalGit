@@ -2,6 +2,7 @@
 
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,7 +10,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".SetupGame" >
+    tools:context=".SetupGame"
+    android:background="@color/colorPrimary">
 
     <LinearLayout
         android:focusable="true"
@@ -20,10 +22,12 @@
     <NumberPicker
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.Picker"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="75dp"
-        android:id="@+id/numberPicker" />
+        android:id="@+id/numberPicker"
+        />
 
     <CheckBox
         android:text="Special round:"
@@ -32,7 +36,9 @@
         android:id="@+id/checkBox7"
         android:layout_above="@+id/editText_SRound"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="24dp" />
+        android:layout_marginBottom="24dp"
+        android:textColor="@android:color/background_light"
+        app:buttonTint="@android:color/background_light" />
 
     <CheckBox
         android:text="One word"
@@ -40,43 +46,20 @@
         android:layout_height="wrap_content"
         android:id="@+id/checkBox6"
         android:layout_above="@+id/checkBox7"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/background_light"
+        app:buttonTint="@android:color/background_light" />
 
-    <CheckBox
-        android:text="Mime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox5"
-        android:layout_above="@+id/checkBox6"
-        android:layout_alignParentStart="true" />
-
-    <CheckBox
-        android:text="Free speech"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox2"
-        android:layout_above="@+id/checkBox5"
-        android:layout_alignParentStart="true" />
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Round name"
-        android:ems="10"
-        android:id="@+id/editText_SRound"
-        android:layout_marginBottom="80dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Next"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/BTN_next" />
+        android:id="@+id/BTN_next"
+        android:textColor="@android:color/background_dark"
+        android:backgroundTint="@android:color/background_light" />
 
     <Button
         android:layout_width="30dp"
@@ -97,16 +80,6 @@
         android:layout_alignBaseline="@+id/checkBox5"
         android:layout_alignBottom="@+id/checkBox5"
         android:layout_alignStart="@+id/Text_SetupInfo2" />
-
-    <TextView
-        android:text="Use this to set time for each round\n\n\n\n\n"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Text_SetupInfo1"
-        android:visibility="visible"
-        android:layout_alignBottom="@+id/numberPicker"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/BTN_next" />
 
     <TextView
         android:text="One can use only one word "
@@ -141,5 +114,47 @@
         android:layout_alignBottom="@+id/checkBox2"
         android:layout_alignStart="@+id/numberPicker"
         android:layout_marginStart="22dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Round name"
+        android:ems="10"
+        android:id="@+id/editText_SRound"
+        android:layout_marginBottom="32dp"
+        android:layout_above="@+id/BTN_next"
+        android:layout_toEndOf="@+id/linearLayout2"
+        android:textColor="@android:color/background_light"
+        android:backgroundTint="@android:color/background_light" />
+
+    <TextView
+        android:text="Use this to set time for each round\n\n\n\n\n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Text_SetupInfo1"
+        android:visibility="visible"
+        android:layout_above="@+id/checkBox2"
+        android:layout_alignEnd="@+id/checkBox7" />
+
+    <CheckBox
+        android:text="Free speech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox2"
+        android:textColor="@android:color/background_light"
+        android:layout_above="@+id/checkBox5"
+        android:layout_toEndOf="@+id/linearLayout2"
+        app:buttonTint="@android:color/background_light" />
+
+    <CheckBox
+        android:text="Mime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox5"
+        android:textColor="@android:color/background_light"
+        android:layout_above="@+id/checkBox6"
+        android:layout_alignParentStart="true"
+        app:buttonTint="@android:color/background_light" />
 
 </RelativeLayout>
