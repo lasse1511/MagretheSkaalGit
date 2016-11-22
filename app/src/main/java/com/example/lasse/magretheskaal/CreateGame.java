@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -18,12 +20,20 @@ public class CreateGame extends AppCompatActivity {
     Intent a;
     String gameName;
     Button join;
+    boolean isCreator;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Remove title bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        //Remove notification bar
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_create_game);
+
 
         i = new Intent(this, SetupGame.class);
         input = new EditText(this);
@@ -44,6 +54,8 @@ public class CreateGame extends AppCompatActivity {
         join.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                isCreator = false;
+                a.putExtra("isCreator", isCreator);
                 builder = builderMethod(a);
                 alert = builder.create();
                 alert.show();
