@@ -1,11 +1,10 @@
 package com.example.lasse.magretheskaal;
 
+import android.content.Context;
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * Created by Daniel on 31-10-2016.
- */
 
 public class LogicLayer /* implements Parcelable */ {
 
@@ -17,6 +16,7 @@ public class LogicLayer /* implements Parcelable */ {
     public int Team2Score;
     public int RoundCounter;
     public boolean TeamOnesRound;
+    DBHelper db;
 
     public LogicLayer() {
         NamesOrg = new ArrayList<String>();
@@ -30,10 +30,20 @@ public class LogicLayer /* implements Parcelable */ {
 
     public void addToNames(String name) {
         NamesOrg.add(name);
+        // Inserting Contacts
+        Log.d("Insert: ", "Inserting ..");
+        db.addName(new NamesFromDB(name));
     }
 
+    public ArrayList<String> getAllNames() {
+    // Reading all contacts
+    Log.d("Reading: ", "Reading all contacts..");
+        return db.getAllNames();
+    }
+
+
     public int displayNumberOfNames() {
-        return NamesOrg.size();
+        return db.getNamesCount();
     }
 
 
@@ -67,6 +77,11 @@ public class LogicLayer /* implements Parcelable */ {
 
     public void removeName(int i) {
         NamesEdit.remove(i);
+    }
+
+    public  void CreateDB(Context context, String name)
+    {
+         db = new DBHelper(context ,name);
     }
 
 
