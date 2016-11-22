@@ -37,11 +37,7 @@ public class SendNames extends AppCompatActivity {
 
         logic.RoundTime = getIntent().getExtras().getInt("RoundTime");
         logic.RoundType = getIntent().getExtras().getStringArrayList("RoundType");
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/master
         gameName = getIntent().getExtras().getString("gameName");
         isCreator = getIntent().getExtras().getBoolean("isCreator");
         logic= new LogicLayer(gameName,isCreator,this);
@@ -62,10 +58,7 @@ public class SendNames extends AppCompatActivity {
         toolb.setTitle(gameName);
 
         next.setOnClickListener(new View.OnClickListener(){
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
             @Override
             public void onClick(View view) {
 
@@ -183,10 +176,7 @@ public class SendNames extends AppCompatActivity {
             AlertDialog alert = builder1.create();
             alert.show();
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
     }
 
 }
