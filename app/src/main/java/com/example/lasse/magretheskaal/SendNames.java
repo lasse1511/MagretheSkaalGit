@@ -35,8 +35,6 @@ public class SendNames extends AppCompatActivity {
             }
         });
 
-        logic.RoundTime = getIntent().getExtras().getInt("RoundTime");
-        logic.RoundType = getIntent().getExtras().getStringArrayList("RoundType");
 
         gameName = getIntent().getExtras().getString("gameName");
         isCreator = getIntent().getExtras().getBoolean("isCreator");

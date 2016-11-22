@@ -126,6 +126,7 @@ public class SetupGame extends AppCompatActivity {
                 i.putStringArrayListExtra("RoundType", rounds);
                 logic.setRoundTime(np.getValue());
                 i.putExtra("RoundTime",logic.getRoundTime() );
+                i.putExtra("isCreator", true);
                 i.putExtra("gameName", gameName);
                 startActivity(i);
             }

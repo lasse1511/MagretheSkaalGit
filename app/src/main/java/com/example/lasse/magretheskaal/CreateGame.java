@@ -15,7 +15,7 @@ public class CreateGame extends AppCompatActivity {
 
     EditText input;
     AlertDialog alert;
-    AlertDialog.Builder builder;
+    AlertDialog alert1;
     Intent i;
     Intent a;
     String gameName;
@@ -39,14 +39,17 @@ public class CreateGame extends AppCompatActivity {
         input = new EditText(this);
         a = new Intent(this, SendNames.class);
 
+        i.putExtra("isCreator", isCreator);
+        alert = builderMethod(i);
+
+        a.putExtra("isCreator", isCreator);
+        alert1 = builderMethod(a);
+
         Button start = (Button) findViewById(R.id.BTN_create);
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                isCreator = true;
-                i.putExtra("isCreator", isCreator);
-                builder = builderMethod(i);
-                alert = builder.create();
+
                 alert.show();
             }
         });
@@ -56,11 +59,7 @@ public class CreateGame extends AppCompatActivity {
         join.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                isCreator = false;
-                a.putExtra("isCreator", isCreator);
-                builder = builderMethod(a);
-                alert = builder.create();
-                alert.show();
+                alert1.show();
             }
         });
 
@@ -74,9 +73,9 @@ public class CreateGame extends AppCompatActivity {
         });
     }
 
-    public AlertDialog.Builder builderMethod(final Intent i)
+    public AlertDialog builderMethod(final Intent i)
     {
-        AlertDialog.Builder builder = new AlertDialog.Builder(CreateGame.this)
+        final AlertDialog.Builder builder = new AlertDialog.Builder(CreateGame.this)
                 .setTitle("Name of the game")
                 .setMessage("Type in the name of the game")
                 .setView(input)
@@ -92,6 +91,8 @@ public class CreateGame extends AppCompatActivity {
 
                     }
                 });
-        return builder;
+        return builder.create();
     }
+
+
 }

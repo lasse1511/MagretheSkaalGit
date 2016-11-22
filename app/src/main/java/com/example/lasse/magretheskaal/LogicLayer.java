@@ -46,7 +46,7 @@ public class LogicLayer /* implements Parcelable */ {
     {
         if(isCreator==true)
         {
-            db.onCreate(db.DATABASE_NAME);
+            //db.onCreate(db.DATABASE_NAME);
         }
     }
 
