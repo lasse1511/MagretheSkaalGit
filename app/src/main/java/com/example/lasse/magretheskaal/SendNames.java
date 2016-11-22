@@ -35,8 +35,9 @@ public class SendNames extends AppCompatActivity {
         logic.RoundTime = getIntent().getExtras().getInt("RoundTime");
         logic.RoundType = getIntent().getExtras().getStringArrayList("RoundType");
 
+
         Button next = (Button) findViewById(R.id.BTN_NextSend);
-        next.setOnClickListener(new View.OnClickListener(){
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -49,10 +50,11 @@ public class SendNames extends AppCompatActivity {
 
                     public void onClick(DialogInterface dialog, int which) {
                         // Do nothing but close the dialog
+                        logic.NamesOrg = logic.getAllNames();
                         logic.NamesEdit = logic.NamesOrg;
                         Intent i = new Intent(SendNames.this, BetweenScreen.class);
                         i.putExtra("NamesEdit", logic.NamesEdit);
-                        i.putExtra("NamesOrg", logic.NamesOrg);
+                        i.putExtra("NamesOrg", logic.getAllNames());
                         i.putStringArrayListExtra("RoundType", logic.RoundType);
                         i.putExtra("RoundTime", logic.getRoundTime());
                         startActivity(i);
@@ -60,7 +62,7 @@ public class SendNames extends AppCompatActivity {
                     }
                 });
 
-                builder.setNegativeButton("NO", new DialogInterface.OnClickListener(){
+                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -74,21 +76,19 @@ public class SendNames extends AppCompatActivity {
                 alert.show();
 
 
-
             }
         });
-
-
 
 
         final TextView counter = (TextView) findViewById(R.id.TV_counter);
 
         Button send = (Button) findViewById(R.id.BTN_Send);
-        send.setOnClickListener(new View.OnClickListener(){
+        send.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View alertView){
+            public void onClick(View alertView) {
 
                 logic.addToNames(name.getText().toString());
+
                 counter.setText("Counter: " + Integer.toString(logic.displayNumberOfNames()));
                 name.setText("");
             }
@@ -105,8 +105,7 @@ public class SendNames extends AppCompatActivity {
 
     //Håndtering af tilbageknappen
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
         final AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
         final Intent i = new Intent(this, SetupGame.class);
         builder1.setTitle("Previous screen");
