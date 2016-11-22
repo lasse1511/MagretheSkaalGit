@@ -78,7 +78,7 @@ public class PlayScreen extends AppCompatActivity {
         mTextField = (TextView) findViewById(R.id.Countdowntimer);
 
         //Custom metode som sætter det lokale logikobjekts attributter til hvad end intentet smider med
-        getIntentExtras();
+        logic = getIntentExtras(logic);
 
 
         //Rundetiden hentes fra logiklaget
@@ -165,6 +165,10 @@ public class PlayScreen extends AppCompatActivity {
         PauseA = PauseAlert.create();
 
 
+        //Gør brugeren ude af stand til at abyde pause
+        PauseA.setCancelable(false);
+        PauseA.setCanceledOnTouchOutside(false);
+
 
         //Dette sker når vi trykker på pause
         pause.setOnClickListener(new View.OnClickListener(){
@@ -173,9 +177,9 @@ public class PlayScreen extends AppCompatActivity {
             {
                 PauseA.show();
                 CDT.cancel();
-
             }
         });
+
 
         //Visning af det første navn
         if (logic.NamesEdit.size() > 1)
@@ -269,7 +273,7 @@ public class PlayScreen extends AppCompatActivity {
         i.putExtra("Team2Score", logic.Team2Score);
     }
 
-    public void getIntentExtras()
+    public LogicLayer getIntentExtras(LogicLayer logic)
     {
         logic.NamesOrg = getIntent().getExtras().getStringArrayList("NamesOrg");
         logic.NamesEdit = getIntent().getExtras().getStringArrayList("NamesEdit");
@@ -280,13 +284,13 @@ public class PlayScreen extends AppCompatActivity {
         logic.RoundCounter = getIntent().getExtras().getInt("RoundCounter");
         logic.Team1Score = getIntent().getExtras().getInt("Team1Score");
         logic.Team2Score = getIntent().getExtras().getInt("Team2Score");
+        return logic;
 
     }
 
 
     public CountDownTimer cTimer()
     {
-
         //En nedtælling starter og ved 1 sekund tilbage begynder processen om at samle intent
         final CountDownTimer CDT = new CountDownTimer(rt, 1000){
             public void onTick(long millisUntilFinished) {

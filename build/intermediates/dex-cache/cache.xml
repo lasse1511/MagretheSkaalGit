@@ -12,6 +12,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\transition\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.0.0_34f9d5abeeba81d0e6084b2398fa4f1a7182e7f9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -27,42 +36,6 @@
         revision="25.0.0"
         sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
         <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_a3b8aeac8c40cefb8dd5962660eeae7816c99961\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_206e6a578ad848a820beeff15a3cc4d09499ead4\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.0.0_eb4513621cd9954bdd32db8704904e060f6b6f06\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="39c4ed6c5664c1fbe774d04468222b0533335c6a">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1eafa6d08590d96cd107a53e01c71157ebecc8b1\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\transition\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.0.0_34f9d5abeeba81d0e6084b2398fa4f1a7182e7f9\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -111,6 +84,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_206e6a578ad848a820beeff15a3cc4d09499ead4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\libs\internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
@@ -138,21 +120,21 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2f0c4e13e1274fe16c25d9a8974080c8214935c4">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6b92dde5d905be9bb08f5429879d5e2de8b72316\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
         <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_dda03e3816d8afa8c78540efae47d683067c4955\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="dfb30f47503a1cf133c523b10afa719168dc8dec">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6b92dde5d905be9bb08f5429879d5e2de8b72316\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -165,12 +147,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.0.0_eb4513621cd9954bdd32db8704904e060f6b6f06\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\libs\internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
         <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_584e5f8e868cd48b6a1ac7bdd233e53e5329d5bf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b99c555ae9f11c1ee96a833921290107c9d3ba7a">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1eafa6d08590d96cd107a53e01c71157ebecc8b1\classes.dex" />
     </item>
     <item
         is-multidex="true"

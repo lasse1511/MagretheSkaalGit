@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -11,6 +12,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.NumberPicker;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -18,11 +20,26 @@ public class SetupGame extends AppCompatActivity {
 
     private LogicLayer logic = new LogicLayer();
 
+    TextView info1;
+    TextView info2;
+    TextView info3;
+    TextView info4;
+    TextView info5;
+    String gameName;
+    Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup_game);
+
+        info1 = (TextView) findViewById(R.id.Text_SetupInfo1);
+        info2 = (TextView) findViewById(R.id.Text_SetupInfo2);
+        info3 = (TextView) findViewById(R.id.Text_SetupInfo3);
+        info4 = (TextView) findViewById(R.id.Text_SetupInfo4);
+        info5 = (TextView) findViewById(R.id.Text_SetupInfo5);
+
+        i = new Intent(SetupGame.this, SendNames.class);
 
         //set diverse objekter på interfacet
         final NumberPicker np = (NumberPicker) findViewById(R.id.numberPicker);
@@ -35,6 +52,13 @@ public class SetupGame extends AppCompatActivity {
         final InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 
 
+        //modtager gameName fra startskærm
+        gameName = getIntent().getExtras().getString("gameName");
+
+        //Sætter titlen på siden
+        Toolbar toolb = (Toolbar) findViewById(R.id.toolbar);
+        toolb.setTitle(gameName);
+
 
         //Sæt standartval af rundetyper
         oWord.setChecked(true);
@@ -42,11 +66,29 @@ public class SetupGame extends AppCompatActivity {
         FreeS.setChecked(true);
 
         // vis infp
-        Button info2 = (Button) findViewById(R.id.BTN_Info2);
-        info2.setOnClickListener(new View.OnClickListener() {
+        Button info2_BTN = (Button) findViewById(R.id.BTN_Info2);
+        info2_BTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SetupGame.this, Info2.class));
+                //startActivity(new Intent(SetupGame.this, Info2.class));
+                if (info1.getVisibility() == View.VISIBLE)
+                {
+                    info1.setVisibility(View.INVISIBLE);
+                    info2.setVisibility(View.INVISIBLE);
+                    info3.setVisibility(View.INVISIBLE);
+                    info4.setVisibility(View.INVISIBLE);
+                    info5.setVisibility(View.INVISIBLE);
+
+                }
+                else {
+                    info1.setVisibility(View.VISIBLE);
+                    info2.setVisibility(View.VISIBLE);
+                    info3.setVisibility(View.VISIBLE);
+                    info4.setVisibility(View.VISIBLE);
+                    info5.setVisibility(View.VISIBLE);
+
+                }
+
             }
         });
 
@@ -81,10 +123,10 @@ public class SetupGame extends AppCompatActivity {
                     rounds.add(oWord.getText().toString());
                 if (Special.isChecked()==true)
                     rounds.add(SpecialT.getText().toString());
-                Intent i = new Intent(SetupGame.this, SendNames.class);
                 i.putStringArrayListExtra("RoundType", rounds);
                 logic.setRoundTime(np.getValue());
                 i.putExtra("RoundTime",logic.getRoundTime() );
+                i.putExtra("gameName", gameName);
                 startActivity(i);
             }
 
@@ -98,30 +140,6 @@ public class SetupGame extends AppCompatActivity {
                 imm.showSoftInput(SpecialT, InputMethodManager.SHOW_IMPLICIT);
             }
         });
-
-       /* SpecialT.setOnKeyListener(new View.OnKeyListener()
-        {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event)
-            {
-                if (event.getAction() == KeyEvent.ACTION_DOWN)
-                {
-                    switch (keyCode)
-                    {
-                        case KeyEvent.KEYCODE_DPAD_CENTER:
-                        case KeyEvent.KEYCODE_ENTER:
-                            imm.showSoftInput(SpecialT, InputMethodManager.HIDE_IMPLICIT_ONLY);
-                            return true;
-                        default:
-                            break;
-                    }
-                }
-                return false;
-            }
-        });
-    */
-
-
     }
 
         //sæt tilgængelige værdier i numberpickeren

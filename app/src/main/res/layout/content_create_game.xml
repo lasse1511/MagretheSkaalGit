@@ -11,28 +11,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.lasse.magretheskaal.CreateGame"
-    tools:showIn="@layout/activity_create_game">
-
-    <Button
-        android:text="Start game"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/BTN_start"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="88dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:enabled="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Magretheskål"
-        android:id="@+id/textView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="62dp" />
+    tools:showIn="@layout/activity_create_game"
+    android:background="@color/colorPrimary">
 
     <Button
         android:layout_width="30dp"
@@ -44,4 +24,44 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="12dp" />
+
+    <Button
+        android:text="Join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/BTN_join"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:enabled="true"
+        android:background="@android:color/background_light"
+        android:layout_above="@+id/BTN_create"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="13dp"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bowl of fortune"
+        android:id="@+id/textView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/background_light"
+        android:layout_below="@+id/BTN_Info1"
+        android:layout_centerHorizontal="true"
+        android:textSize="46sp"
+        android:fontFamily="casual"
+        android:textAllCaps="false" />
+
+    <Button
+        android:text="Create "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/BTN_create"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:enabled="true"
+        android:layout_marginBottom="39dp"
+        android:background="@android:color/background_light"
+        android:textColor="@android:color/background_dark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
