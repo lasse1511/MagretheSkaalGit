@@ -16,6 +16,8 @@ public class LogicLayer /* implements Parcelable */ {
     public int Team2Score;
     public int RoundCounter;
     public boolean TeamOnesRound;
+    String gameName;
+    Boolean isCreator;
     DBHelper db;
 
     public LogicLayer() {
@@ -27,6 +29,26 @@ public class LogicLayer /* implements Parcelable */ {
         RoundCounter = 0;
     }
 
+    public LogicLayer(String gname, Boolean iCreator,Context context) {
+        NamesOrg = new ArrayList<String>();
+        NamesEdit = NamesOrg;
+        Team1Score = 0;
+        Team2Score = 0;
+        TeamOnesRound = true;
+        RoundCounter = 0;
+        gameName = gname;
+        isCreator = iCreator;
+        db = new DBHelper(context,gname);
+
+    }
+
+    public void CreateTable()
+    {
+        if(isCreator==true)
+        {
+            db.onCreate(db.DATABASE_NAME);
+        }
+    }
 
     public void addToNames(String name) {
         NamesOrg.add(name);
@@ -77,11 +99,6 @@ public class LogicLayer /* implements Parcelable */ {
 
     public void removeName(int i) {
         NamesEdit.remove(i);
-    }
-
-    public  void CreateDB(Context context, String name)
-    {
-         db = new DBHelper(context ,name);
     }
 
 

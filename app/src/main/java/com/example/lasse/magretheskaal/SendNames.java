@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class SendNames extends AppCompatActivity {
 
-    LogicLayer logic = new LogicLayer();
+    LogicLayer logic;
     String gameName;
     boolean isCreator = true;
 
@@ -37,15 +37,15 @@ public class SendNames extends AppCompatActivity {
 
         logic.RoundTime = getIntent().getExtras().getInt("RoundTime");
         logic.RoundType = getIntent().getExtras().getStringArrayList("RoundType");
-<<<<<<< HEAD
 
 
-        Button next = (Button) findViewById(R.id.BTN_NextSend);
-        next.setOnClickListener(new View.OnClickListener() {
-=======
         gameName = getIntent().getExtras().getString("gameName");
         isCreator = getIntent().getExtras().getBoolean("isCreator");
+        logic= new LogicLayer(gameName,isCreator,this);
         Button next = (Button) findViewById(R.id.BTN_NextSend);
+        logic.RoundTime = getIntent().getExtras().getInt("RoundTime");
+        logic.RoundType = getIntent().getExtras().getStringArrayList("RoundType");
+
 
 
         //Usynliggøre knappen "next" for joiners
@@ -53,12 +53,13 @@ public class SendNames extends AppCompatActivity {
             next.setVisibility(View.INVISIBLE);
 
 
+
         //Sætter titlen på siden
         Toolbar toolb = (Toolbar) findViewById(R.id.toolbar);
         toolb.setTitle(gameName);
 
         next.setOnClickListener(new View.OnClickListener(){
->>>>>>> origin/master
+
             @Override
             public void onClick(View view) {
 
@@ -126,31 +127,6 @@ public class SendNames extends AppCompatActivity {
 
     //Håndtering af tilbageknappen
     @Override
-<<<<<<< HEAD
-    public void onBackPressed() {
-        final AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-        final Intent i = new Intent(this, SetupGame.class);
-        builder1.setTitle("Previous screen");
-        builder1.setMessage("Are you sure you want to go back? The list of names will be lost.");
-        builder1.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-
-                startActivity(i);
-            }
-        });
-
-        builder1.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-                // Do nothing
-                dialog.dismiss();
-            }
-        });
-
-        AlertDialog alert = builder1.create();
-        alert.show();
-=======
     public void onBackPressed()
     {
         if (isCreator == true) {
@@ -200,7 +176,7 @@ public class SendNames extends AppCompatActivity {
             AlertDialog alert = builder1.create();
             alert.show();
         }
->>>>>>> origin/master
+
     }
 
 }

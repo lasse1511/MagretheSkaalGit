@@ -43,6 +43,8 @@ public class CreateGame extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                isCreator = true;
+                i.putExtra("isCreator", isCreator);
                 builder = builderMethod(i);
                 alert = builder.create();
                 alert.show();
