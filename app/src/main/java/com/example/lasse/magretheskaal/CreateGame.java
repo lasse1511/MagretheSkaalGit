@@ -21,7 +21,7 @@ public class CreateGame extends AppCompatActivity {
     String gameName;
     Button join;
     boolean isCreator;
-
+    Button start;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,6 @@ public class CreateGame extends AppCompatActivity {
 
         setContentView(R.layout.activity_create_game);
 
-
         i = new Intent(this, SetupGame.class);
         input = new EditText(this);
         a = new Intent(this, SendNames.class);
@@ -45,11 +44,10 @@ public class CreateGame extends AppCompatActivity {
         a.putExtra("isCreator", isCreator);
         alert1 = builderMethod(a);
 
-        Button start = (Button) findViewById(R.id.BTN_create);
+        start = (Button) findViewById(R.id.BTN_create);
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 alert.show();
             }
         });
@@ -88,8 +86,7 @@ public class CreateGame extends AppCompatActivity {
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface d, int w) {
-
-                    }
+                }
                 });
         return builder.create();
     }
