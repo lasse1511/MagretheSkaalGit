@@ -11,12 +11,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class SendNames extends AppCompatActivity {
 
     LogicLayer logic;
     String gameName;
     boolean isCreator = true;
-
+    DatabaseReference myRef;
+    int counter_;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +43,7 @@ public class SendNames extends AppCompatActivity {
         });
 
 
+        final TextView counter = (TextView) findViewById(R.id.TV_counter);
         gameName = getIntent().getExtras().getString("gameName");
         isCreator = getIntent().getExtras().getBoolean("isCreator");
         logic= new LogicLayer(gameName,isCreator,this);
@@ -43,6 +51,9 @@ public class SendNames extends AppCompatActivity {
         logic.RoundTime = getIntent().getExtras().getInt("RoundTime");
         logic.RoundType = getIntent().getExtras().getStringArrayList("RoundType");
 
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        myRef = database.getReference();
 
 
         //Usynliggøre knappen "next" for joiners
@@ -99,17 +110,47 @@ public class SendNames extends AppCompatActivity {
         });
 
 
+        ChildEventListener childEventListener = new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+                counter_++;
+                counter.setText("Counter: " + Integer.toString(counter_));
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        };
+
+        myRef.addChildEventListener(childEventListener);
 
 
-        final TextView counter = (TextView) findViewById(R.id.TV_counter);
+
+
+
 
         Button send = (Button) findViewById(R.id.BTN_Send);
         send.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View alertView){
 
-                logic.addToNames(name.getText().toString());
-                counter.setText("Counter: " + Integer.toString(logic.displayNumberOfNames()));
+                myRef.child(gameName).push().setValue(name.getText().toString());
                 name.setText("");
             }
         });

@@ -11,6 +11,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class CreateGame extends AppCompatActivity {
 
     EditText input;
@@ -22,6 +25,8 @@ public class CreateGame extends AppCompatActivity {
     Button join;
     boolean isCreator;
     Button start;
+    DatabaseReference myRef;
+    DatabaseReference myRefChild;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,15 +44,17 @@ public class CreateGame extends AppCompatActivity {
         a = new Intent(this, SendNames.class);
 
         i.putExtra("isCreator", isCreator);
-        alert = builderMethod(i);
+        alert = builderMethodCreate(i);
 
         a.putExtra("isCreator", isCreator);
-        alert1 = builderMethod(a);
+        alert1 = builderMethodJoin(a);
 
         start = (Button) findViewById(R.id.BTN_create);
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                myRef = database.getReference();
                 alert.show();
             }
         });
@@ -71,7 +78,36 @@ public class CreateGame extends AppCompatActivity {
         });
     }
 
-    public AlertDialog builderMethod(final Intent i)
+    public AlertDialog builderMethodCreate(final Intent i)
+    {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(CreateGame.this)
+                .setTitle("Name of the game")
+                .setMessage("Type in the name of the game")
+                .setView(input)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int w) {
+                        gameName = input.getText().toString();
+                        i.putExtra("gameName", gameName);
+
+                        myRef.child(gameName).push().setValue("");
+
+                        //String key = myRef.child(gameName).push().getKey();
+
+
+
+
+
+                        startActivity(i);
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface d, int w) {
+                }
+                });
+        return builder.create();
+    }
+
+    public AlertDialog builderMethodJoin(final Intent i)
     {
         final AlertDialog.Builder builder = new AlertDialog.Builder(CreateGame.this)
                 .setTitle("Name of the game")
@@ -86,7 +122,7 @@ public class CreateGame extends AppCompatActivity {
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface d, int w) {
-                }
+                    }
                 });
         return builder.create();
     }

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "509569576654",
+    "firebase_url": "https://magretheskaal-f56e2.firebaseio.com",
+    "project_id": "magretheskaal-f56e2",
+    "storage_bucket": "magretheskaal-f56e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509569576654:android:3600d3c4602b3265",
+        "android_client_info": {
+          "package_name": "com.example.lasse.magretheskaal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509569576654-as40b96pa9sfg6blkiilq6l4affhifhe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lasse.magretheskaal",
+            "certificate_hash": "DEDD9F5331794ACE91A655612E76A73E06D681AC"
+          }
+        },
+        {
+          "client_id": "509569576654-mchpeuc9r38nvq5dtj3otim1lehnpeia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs2nWJ7G13SsJHjH5L7mMhxTCEaO_2bgI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509569576654-mchpeuc9r38nvq5dtj3otim1lehnpeia.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

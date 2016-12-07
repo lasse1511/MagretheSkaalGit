@@ -1,7 +1,6 @@
 package com.example.lasse.magretheskaal;
 
 import android.content.Context;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +37,6 @@ public class LogicLayer /* implements Parcelable */ {
         RoundCounter = 0;
         gameName = gname;
         isCreator = iCreator;
-        db = new DBHelper(context,gname);
 
     }
 
@@ -50,23 +48,6 @@ public class LogicLayer /* implements Parcelable */ {
         }
     }
 
-    public void addToNames(String name) {
-        NamesOrg.add(name);
-        // Inserting Contacts
-        Log.d("Insert: ", "Inserting ..");
-        db.addName(new NamesFromDB(name));
-    }
-
-    public ArrayList<String> getAllNames() {
-    // Reading all contacts
-    Log.d("Reading: ", "Reading all contacts..");
-        return db.getAllNames();
-    }
-
-
-    public int displayNumberOfNames() {
-        return db.getNamesCount();
-    }
 
 
     public int setRoundTime(int rt) {
