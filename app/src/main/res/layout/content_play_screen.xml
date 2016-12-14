@@ -11,43 +11,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.lasse.magretheskaal.PlayScreen"
-    tools:showIn="@layout/activity_play_screen">
-
-    <Button
-        android:text="Right answer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/BTN_right"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="106dp" />
-
-    <TextView
-        android:text="Name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/text_namesPlay"
-        android:layout_marginBottom="73dp"
-        android:layout_above="@+id/BTN_right"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/BTN_pass"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="47dp" />
-
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/text_namesPlay"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="42dp"
-        android:id="@+id/Countdowntimer" />
+    tools:showIn="@layout/activity_play_screen"
+    android:background="@color/colorPrimary"
+    android:backgroundTint="@color/colorPrimary">
 
     <Button
         android:layout_width="35dp"
@@ -57,5 +23,45 @@
         android:background="@android:drawable/ic_media_pause"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_namesPlay"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:text="Pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BTN_pass"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/BTN_PlayPAUSE"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/background_light" />
+
+    <Button
+        android:text="  Right answer  "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BTN_right"
+        android:layout_below="@+id/text_namesPlay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"
+        android:background="@android:color/background_light" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Countdowntimer"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/BTN_pass"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/background_light" />
 
 </RelativeLayout>

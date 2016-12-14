@@ -21,6 +21,132 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="190a642ba16d1421296a4d794606279b80039c59">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.8.0_bc205574015ffe545cb5bc8f2274458ea1adb4df\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="06460d8e4d2a89f3f4ba31a145241616dd14c5d1">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1eafa6d08590d96cd107a53e01c71157ebecc8b1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.0_8b6d71a5ab7cd077bef4ef1bd47546454b98e4f0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.0_c0329ca333fa26867b834f6b1255b7ddd5ede597\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.8.0_3d35c371491b79bf1566efaaddcd618dad995e09\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\design\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.0.0_7b5c82b2b245bb295725ceeb3c09966e565734c2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6b6f292b8b951dcf2ecf2b20853e3eabc7d65c48">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-9.8.0_0733a5df49ba457543fe8cdce92457effb833be5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.8.0_41eb811d4212e402b1e907580fc0a4647b0ed4d7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_850c168b6cfa5a2177f4491d6af612a9afb7cad9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.0.0_27884b4479b983a11ddb25291c7f3068481ab769\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="19197d90129783fa54be6c8afbbfa26266ba24cc">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6b92dde5d905be9bb08f5429879d5e2de8b72316\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5ffe8867f51cfc726e9fb21db1e5b6962ebf25a0">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-messaging-9.8.0_2aae7da79ac59121e130c74d013457e0b93855e6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.0.0_8692a075a24491fe8461740e48260925f45d8620\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.0_7af8d0e7a01e35a0337686ae5fd18c9a1c8d737b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
@@ -57,30 +183,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="190a642ba16d1421296a4d794606279b80039c59">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.8.0_bc205574015ffe545cb5bc8f2274458ea1adb4df\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
         <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.0.0_eb4513621cd9954bdd32db8704904e060f6b6f06\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="9229509961d2c4ecc34dbdaa7834d73de3d7923c">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1eafa6d08590d96cd107a53e01c71157ebecc8b1\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -93,33 +201,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.0_8b6d71a5ab7cd077bef4ef1bd47546454b98e4f0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.0_c0329ca333fa26867b834f6b1255b7ddd5ede597\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.8.0_3d35c371491b79bf1566efaaddcd618dad995e09\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -129,30 +210,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\design\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.0.0_7b5c82b2b245bb295725ceeb3c09966e565734c2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Lasse\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.0\support-annotations-25.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
         <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.0_f925a9401bb1e36af198229867bc4c08067ca450\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="6b6f292b8b951dcf2ecf2b20853e3eabc7d65c48">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-9.8.0_0733a5df49ba457543fe8cdce92457effb833be5\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -174,33 +237,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c61641e333fa88da21758bab8cc28ee16604b05f">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.8.0_41eb811d4212e402b1e907580fc0a4647b0ed4d7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\libs\internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_850c168b6cfa5a2177f4491d6af612a9afb7cad9\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.0.0_27884b4479b983a11ddb25291c7f3068481ab769\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -219,48 +255,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ac6b47a5a3a5245c4cffe688d318e985a34f7f5e">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6b92dde5d905be9bb08f5429879d5e2de8b72316\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="5ffe8867f51cfc726e9fb21db1e5b6962ebf25a0">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-messaging-9.8.0_2aae7da79ac59121e130c74d013457e0b93855e6\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.0.0_8692a075a24491fe8461740e48260925f45d8620\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\libs\internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
         <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_584e5f8e868cd48b6a1ac7bdd233e53e5329d5bf\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="26674000177e45447a0326a6ad84612761199a13">
-        <dex dex="C:\Users\Lasse\Documents\MagretheSkaal\MagretheSkaal\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.0_7af8d0e7a01e35a0337686ae5fd18c9a1c8d737b\classes.dex" />
     </item>
 
 </items>

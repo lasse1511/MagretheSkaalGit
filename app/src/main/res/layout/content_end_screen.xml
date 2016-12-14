@@ -11,7 +11,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.lasse.magretheskaal.EndScreen"
-    tools:showIn="@layout/activity_end_screen">
+    tools:showIn="@layout/activity_end_screen"
+    android:background="@color/colorPrimary">
 
     <TextView
         android:text="Who won?!"
@@ -20,7 +21,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="142dp"
-        android:id="@+id/Text_winner" />
+        android:id="@+id/Text_winner"
+        android:textSize="30sp"
+        android:textColor="@android:color/background_light" />
 
     <TextView
         android:text="Team1Score"
@@ -28,13 +31,17 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/Text_ENDTeam1Score" />
+        android:id="@+id/Text_ENDTeam1Score"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_light" />
 
     <TextView
         android:text="Team2Score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/Text_ENDTeam2Score"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/Text_ENDTeam2Score" />
+        android:textSize="18sp"
+        android:textColor="@android:color/background_light" />
 </RelativeLayout>

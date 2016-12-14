@@ -17,6 +17,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+
 public class SendNames extends AppCompatActivity {
 
     LogicLayer logic;
@@ -24,7 +28,10 @@ public class SendNames extends AppCompatActivity {
     boolean isCreator = true;
     DatabaseReference myRef;
     int counter_;
+    String key;
+    Boolean first = false;
 
+    Collection<Object> NameList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +59,7 @@ public class SendNames extends AppCompatActivity {
         logic.RoundType = getIntent().getExtras().getStringArrayList("RoundType");
 
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
         myRef = database.getReference();
 
 
@@ -80,6 +87,15 @@ public class SendNames extends AppCompatActivity {
 
                     public void onClick(DialogInterface dialog, int which) {
                         // Do nothing but close the dialog
+                        Object[] list = NameList.toArray();
+                        myRef.child(gameName).child(key).setValue("True3401");
+
+                        for (Object aList : list) {
+                            if (!logic.NamesOrg.contains(aList.toString()) && !aList.toString().equals("False3401"))
+                                logic.NamesOrg.add(aList.toString());
+
+                        }
+
                         logic.NamesEdit = logic.NamesOrg;
                         Intent i = new Intent(SendNames.this, BetweenScreen.class);
                         i.putExtra("NamesEdit", logic.NamesEdit);
@@ -113,11 +129,16 @@ public class SendNames extends AppCompatActivity {
         ChildEventListener childEventListener = new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-            }
+
+        }
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
 
+                Map<String, Object> td = (HashMap<String,Object>) dataSnapshot.getValue();
+
+
+                NameList = td.values();
                 counter_++;
                 counter.setText("Counter: " + Integer.toString(counter_));
             }
@@ -137,8 +158,39 @@ public class SendNames extends AppCompatActivity {
 
             }
         };
-
         myRef.addChildEventListener(childEventListener);
+
+        ChildEventListener childEventListenerGamename = new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                if (first == false) {
+                    key = dataSnapshot.getKey();
+                    first = true;
+                }
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        };
+        myRef.child(gameName).addChildEventListener(childEventListenerGamename);
 
 
 

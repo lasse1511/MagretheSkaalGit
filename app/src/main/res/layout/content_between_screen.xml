@@ -11,16 +11,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.lasse.magretheskaal.BetweenScreen"
-    tools:showIn="@layout/activity_between_screen">
-
-    <Button
-        android:text="Start next round "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="42dp"
-        android:id="@+id/BTN_StartBetween" />
+    tools:showIn="@layout/activity_between_screen"
+    android:backgroundTint="@color/colorPrimary"
+    android:background="@color/colorPrimary">
 
     <TextView
         android:text="Team 1 score"
@@ -28,15 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/Text_ENDTeam1Score" />
-
-    <TextView
-        android:text="Team 2 score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Text_Team2score"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:id="@+id/Text_ENDTeam1Score"
+        android:textColor="@android:color/background_light" />
 
     <TextView
         android:text="Which round?"
@@ -45,7 +31,9 @@
         android:layout_marginTop="120dp"
         android:id="@+id/Text_RoundBetween"
         android:layout_below="@+id/Text_ENDTeam1Score"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:textColor="@android:color/background_light" />
 
     <TextView
         android:text="Who's round?"
@@ -54,6 +42,27 @@
         android:layout_below="@+id/Text_RoundBetween"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="57dp"
-        android:id="@+id/Text_WhosRound" />
+        android:id="@+id/Text_WhosRound"
+        android:textSize="36sp"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:text="  Start next round  "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/BTN_StartBetween"
+        android:background="@android:color/background_light"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Team 2 score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Text_Team2score"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/background_light" />
 
 </RelativeLayout>

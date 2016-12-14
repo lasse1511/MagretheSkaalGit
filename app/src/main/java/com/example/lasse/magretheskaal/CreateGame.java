@@ -89,13 +89,7 @@ public class CreateGame extends AppCompatActivity {
                         gameName = input.getText().toString();
                         i.putExtra("gameName", gameName);
 
-                        myRef.child(gameName).push().setValue("");
-
-                        //String key = myRef.child(gameName).push().getKey();
-
-
-
-
+                        myRef.child(gameName).push().setValue("False3401");
 
                         startActivity(i);
                     }
