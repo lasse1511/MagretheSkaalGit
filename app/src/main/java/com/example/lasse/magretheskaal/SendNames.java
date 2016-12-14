@@ -182,6 +182,7 @@ public class SendNames extends AppCompatActivity {
                 });
 
                 AlertDialog alert = builder.create();
+                alert.show();
 
 
             }
