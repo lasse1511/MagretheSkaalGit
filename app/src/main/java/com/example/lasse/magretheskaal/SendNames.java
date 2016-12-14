@@ -54,7 +54,7 @@ public class SendNames extends AppCompatActivity {
         gameName = getIntent().getExtras().getString("gameName");
         isCreator = getIntent().getExtras().getBoolean("isCreator");
         logic= new LogicLayer(gameName,isCreator,this);
-        Button next = (Button) findViewById(R.id.BTN_NextSend);
+        final Button next = (Button) findViewById(R.id.BTN_NextSend);
         logic.RoundTime = getIntent().getExtras().getInt("RoundTime");
         logic.RoundType = getIntent().getExtras().getStringArrayList("RoundType");
 
@@ -64,8 +64,7 @@ public class SendNames extends AppCompatActivity {
 
 
         //Usynliggøre knappen "next" for joiners
-        if (isCreator == false)
-            next.setVisibility(View.INVISIBLE);
+        next.setVisibility(View.INVISIBLE);
 
 
 
@@ -141,6 +140,8 @@ public class SendNames extends AppCompatActivity {
                 NameList = td.values();
                 counter_++;
                 counter.setText("Counter: " + Integer.toString(counter_));
+                if (isCreator == true)
+                    next.setVisibility(View.VISIBLE);
             }
 
             @Override
@@ -171,18 +172,20 @@ public class SendNames extends AppCompatActivity {
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-                final AlertDialog.Builder builder = new AlertDialog.Builder(SendNames.this)
-                        .setTitle("Good job!")
-                        .setMessage("The host has started the game - you're job here is done!");
+                if (isCreator == false) {
+                    final AlertDialog.Builder builder = new AlertDialog.Builder(SendNames.this)
+                            .setTitle("Good job!")
+                            .setMessage("The host has started the game - you're job here is done!");
 
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int w) {
-                        startActivity(new Intent(SendNames.this, CreateGame.class));
-                    }
-                });
+                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int w) {
+                            startActivity(new Intent(SendNames.this, CreateGame.class));
+                        }
+                    });
 
-                AlertDialog alert = builder.create();
-                alert.show();
+                    AlertDialog alert = builder.create();
+                    alert.show();
+                }
 
 
             }
