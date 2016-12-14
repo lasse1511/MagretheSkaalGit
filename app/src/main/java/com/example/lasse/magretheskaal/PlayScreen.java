@@ -10,9 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 import java.util.Random;
 
 
@@ -192,13 +189,11 @@ public class PlayScreen extends AppCompatActivity {
         {
             index = rand.nextInt(logic.NamesEdit.size()-1);
             names.setText(logic.NamesEdit.get(index));
-            logic.removeName(index);
         }
         else if (logic.NamesEdit.size() == 1)
         {
             index = 0;
             names.setText(logic.NamesEdit.get(index));
-            logic.removeName(index);
         }
 
 
@@ -249,8 +244,18 @@ public class PlayScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (logic.NamesEdit.size() > 1) {
-                    index = rand.nextInt(logic.NamesEdit.size() - 1);
-                    names.setText(logic.NamesEdit.get(index));
+                    int indexp = index;
+                    int index_ = indexp;
+
+                    while (index_ ==  indexp)
+                    {
+                        indexp = new Random().nextInt(logic.NamesEdit.size());
+                        if (index_ != indexp) {
+                            names.setText(logic.NamesEdit.get(indexp));
+                            index = indexp;
+                            break;
+                        }
+                    }
                 }
 
             }
