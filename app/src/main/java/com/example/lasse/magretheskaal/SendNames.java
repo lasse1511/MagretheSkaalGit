@@ -171,7 +171,18 @@ public class SendNames extends AppCompatActivity {
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-                
+                final AlertDialog.Builder builder = new AlertDialog.Builder(SendNames.this)
+                        .setTitle("Good job!")
+                        .setMessage("The host has started the game - you're job here is done!");
+
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int w) {
+                        startActivity(new Intent(SendNames.this, CreateGame.class));
+                    }
+                });
+
+                AlertDialog alert = builder.create();
+
 
             }
 
